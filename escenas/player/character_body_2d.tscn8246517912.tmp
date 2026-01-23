@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3sky51l2wo47"]
+
+[ext_resource type="SpriteFrames" uid="uid://12bc4iysidab" path="res://escenas/player/personaje.tres" id="1_pwxuj"]
+[ext_resource type="Script" uid="uid://dffq5hgf2v4tf" path="res://escenas/player/personaje.gd" id="1_ycxet"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_ycxet")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_pwxuj")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)
+limit_smoothed = true
+
+[node name="Marker2D" type="Marker2D" parent="."]
