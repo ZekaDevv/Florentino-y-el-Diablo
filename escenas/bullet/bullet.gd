@@ -1,6 +1,6 @@
 extends Area2D
 
-var _speed: float = 200
+var _speed: float = 350
 
 var direction: Vector2 = Vector2.RIGHT
 

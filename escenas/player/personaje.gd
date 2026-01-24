@@ -3,9 +3,9 @@ extends CharacterBody2D
 @export var scene_bullet: PackedScene
 @onready var shot_point: Marker2D = $Marker2D
 
-var _max_speed : float = 500.00
-var _acceleration: float = 1800.00
-var _friction: float = 1500.00 
+var _max_speed : float = 250.00
+var _acceleration: float = 1000.00
+var _friction: float = 800.00 
 var _remember_direction: bool = false
 
 var _cooldown: float = 0.25
