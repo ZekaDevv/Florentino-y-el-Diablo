@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3sky51l2wo47"]
+
+[ext_resource type="SpriteFrames" uid="uid://12bc4iysidab" path="res://entities/player/personaje.tres" id="1_pwxuj"]
+[ext_resource type="Script" uid="uid://dffq5hgf2v4tf" path="res://entities/player/personaje.gd" id="1_ycxet"]
+[ext_resource type="PackedScene" uid="uid://bifle5qxdda0c" path="res://entities/bullet/bullet.tscn" id="2_41hvs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_41hvs"]
+size = Vector2(20, 26)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_ycxet")
+scene_bullet = ExtResource("2_41hvs")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_pwxuj")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_41hvs")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.8, 1.8)
+limit_smoothed = true
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(2, 1)
