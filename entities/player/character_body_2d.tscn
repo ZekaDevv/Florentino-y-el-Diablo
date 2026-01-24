@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bifle5qxdda0c" path="res://entities/bullet/bullet.tscn" id="2_41hvs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_41hvs"]
-size = Vector2(20, 26)
+size = Vector2(17, 24)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_ycxet")
@@ -16,6 +16,7 @@ sprite_frames = ExtResource("1_pwxuj")
 animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_41hvs")
 
 [node name="Camera2D" type="Camera2D" parent="."]
