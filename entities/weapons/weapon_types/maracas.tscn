@@ -3,3 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://cqkui8b761lwd" path="res://entities/weapons/weapon.tscn" id="1_6lv5i"]
 
 [node name="Maracas" instance=ExtResource("1_6lv5i")]
+shoot_pattern = 3
+cooldown = 0.5
+bullet_count = 2.0
+burst_delay = 0.15
+spawn_margin = 15.0
+arc_spread = 10.0
