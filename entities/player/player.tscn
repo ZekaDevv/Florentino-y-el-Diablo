@@ -20,7 +20,7 @@ size = Vector2(17, 24)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2kyv7"]
 size = Vector2(12, 12)
 
-[sub_resource type="PackedScene" id="PackedScene_a1qjk"]
+[sub_resource type="PackedScene" id="PackedScene_j3ovn"]
 resource_local_to_scene = true
 _bundled = {
 "conn_count": 0,
@@ -54,26 +54,26 @@ limit_smoothed = true
 
 [node name="Weapon" type="Node2D" parent="."]
 
-[node name="Harp" parent="Weapon" instance=ExtResource("3_j3ovn")]
-shoot_pattern = 4
-scene_bullet = ExtResource("4_afbqv")
-cooldown = 0.35
-bullet_count = 11.0
-
 [node name="Drum" parent="Weapon" instance=ExtResource("4_fkugw")]
-visible = false
 
-[node name="Cuatro" parent="Weapon" instance=ExtResource("3_wvtmh")]
+[node name="Base" parent="Weapon" instance=ExtResource("3_fkugw")]
 visible = false
+scene_bullet = SubResource("PackedScene_j3ovn")
 
 [node name="Guitar" parent="Weapon" instance=ExtResource("3_qiwj3")]
 visible = false
 shoot_pattern = 1
 cooldown = 0.5
 
-[node name="Base" parent="Weapon" instance=ExtResource("3_fkugw")]
+[node name="Cuatro" parent="Weapon" instance=ExtResource("3_wvtmh")]
 visible = false
-scene_bullet = SubResource("PackedScene_a1qjk")
+
+[node name="Harp" parent="Weapon" instance=ExtResource("3_j3ovn")]
+visible = false
+shoot_pattern = 4
+scene_bullet = ExtResource("4_afbqv")
+cooldown = 0.35
+bullet_count = 11.0
 
 [node name="HealthComponent" parent="." instance=ExtResource("4_gd5fs")]
 max_health = 9
