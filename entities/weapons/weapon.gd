@@ -104,3 +104,4 @@ func _spawn_bullet_offset(dir: Vector2, source_velocity: Vector2, extra_offset: 
 	var margen_frontal = dir * spawn_margin
 	bullet.global_position = centro + margen_frontal + extra_offset
 
+#2
