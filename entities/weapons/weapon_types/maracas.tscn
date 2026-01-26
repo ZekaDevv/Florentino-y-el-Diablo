@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6w1ni4spwjd5"]
+
+[ext_resource type="PackedScene" uid="uid://cqkui8b761lwd" path="res://entities/weapons/weapon.tscn" id="1_6lv5i"]
+
+[node name="Maracas" instance=ExtResource("1_6lv5i")]

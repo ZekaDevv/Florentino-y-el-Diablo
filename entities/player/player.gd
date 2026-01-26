@@ -1,21 +1,25 @@
 extends CharacterBody2D
 
-@export var scene_bullet: PackedScene
-@export_range(0.0, 1.0) var inertia_factor: float = 0.5
-@onready var shot_point: Marker2D = $Marker2D
+@onready var health_component = $HealthComponent
+@onready var weapon_holder = $Weapon 
 @onready var sprite_animation : AnimatedSprite2D = $AnimatedSprite2D
 
-var _max_speed : float = 200.00
+var _max_speed : float = 150.00
 var _acceleration: float = 1000.00
 var _friction: float = 800.00 
 
 var _remember_shot_direction: bool = false
 
-var _cooldown: float = 0.25
-var can_shot: bool = true
+var _current_weapon: Weapon
 
+func _ready():
+	health_component.health_depleted.connect(_death_player)
 
 func _physics_process(delta: float) -> void:
+	if weapon_holder.get_child_count() > 0:
+		var child = weapon_holder.get_child(0)
+		_current_weapon = child
+
 	var _direction: Vector2 = Input.get_vector(
 		"left_movement", "right_movement", "up_movement", "down_movement"
 		)
@@ -35,13 +39,10 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 	_animation_player(_shot_vector)
-	
-	if _shot_vector != Vector2.ZERO and can_shot:
-		var _vector_final = _shot_vector 
-		
-		if _shot_vector != Vector2.ZERO:
-			_shot(_vector_final)    
 
+	if _shot_vector != Vector2.ZERO and _current_weapon:
+		_current_weapon.shoot(_shot_vector, velocity)
+	
 	
 
 func _animation_player(shot_input: Vector2) -> void:
@@ -61,30 +62,8 @@ func _animation_player(shot_input: Vector2) -> void:
 		sprite_animation.play("idle")
 
 
+func _death_player() -> void:
+	set_physics_process(false)
+	sprite_animation.play("idle")
 
-func _shot(dir_bullet: Vector2) -> void:
-	var _new_bullet = scene_bullet.instantiate()
-
-	_new_bullet.player_inertia = velocity * inertia_factor	
-	var _parallel_speed = velocity.project(dir_bullet)
-	var _lateral_velocity = velocity - _parallel_speed
-	
-	_new_bullet.player_inertia = _lateral_velocity * inertia_factor
-
-	get_parent().add_child(_new_bullet)
-	
-	if shot_point:
-		_new_bullet.global_position = shot_point.global_position
-	else:
-		_new_bullet.global_position = global_position 
-
-	_new_bullet.direction = dir_bullet
-
-	can_shot = false
-	
-	get_tree().create_timer(_cooldown).timeout.connect(_shot_reset)
-	
-	
-	
-func _shot_reset() -> void:
-	can_shot = true
+	modulate = Color(0.5, 0, 0)

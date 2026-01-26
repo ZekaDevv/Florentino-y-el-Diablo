@@ -58,6 +58,11 @@ down_shot={
 
 [layer_names]
 
+2d_render/layer_1="Player"
+2d_render/layer_2="Entities"
+2d_render/layer_3="ED"
+2d_render/layer_4="ED"
+2d_render/layer_5="EI"
 2d_physics/layer_1="Player"
 2d_physics/layer_2="Walls"
 2d_physics/layer_3="Bullets"
@@ -66,7 +71,7 @@ avoidance/layer_1="Entities"
 avoidance/layer_2="Bullets"
 avoidance/layer_3="Walls"
 avoidance/layer_4="IE"
-avoidance/layer_5="DE"
+avoidance/layer_5="E"
 
 [rendering]
 

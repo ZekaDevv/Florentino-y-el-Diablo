@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcjprw43abw1n"]
+
+[ext_resource type="PackedScene" uid="uid://bifle5qxdda0c" path="res://entities/bullet/BulletBase.tscn" id="1_te2j6"]
+
+[node name="BulletStrong" instance=ExtResource("1_te2j6")]
+damage = 3.0
+speed = 300
+life_time = 0.3

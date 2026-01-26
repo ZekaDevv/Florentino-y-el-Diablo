@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6afcx1yc8jpf"]
+
+[ext_resource type="Script" uid="uid://dpj0dnpka5ps3" path="res://GUI/gui.gd" id="1_egdk1"]
+[ext_resource type="PackedScene" uid="uid://dwvblpd44jfw0" path="res://GUI/HUD/health/heart_gui.tscn" id="2_x71ey"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_egdk1")
+heart_gui_scene = ExtResource("2_x71ey")
+
+[node name="HeartContainer" type="HBoxContainer" parent="."]

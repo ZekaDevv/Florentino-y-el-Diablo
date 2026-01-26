@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgxujxt0vo28a"]
+
+[ext_resource type="PackedScene" uid="uid://cqkui8b761lwd" path="res://entities/weapons/weapon.tscn" id="1_v04tm"]
+[ext_resource type="PackedScene" uid="uid://w7lbnotx4acw" path="res://entities/bullet/bullet_types/bullet_strong_durn.tscn" id="2_km8qn"]
+
+[node name="Drum" instance=ExtResource("1_v04tm")]
+shoot_pattern = 2
+scene_bullet = ExtResource("2_km8qn")
+cooldown = 0.5
+inertia_factor = 0.0
+bullet_count = 16.0

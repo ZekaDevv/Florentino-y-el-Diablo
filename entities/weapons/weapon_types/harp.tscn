@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cm4iqlnpjscd6"]
+
+[ext_resource type="PackedScene" uid="uid://cqkui8b761lwd" path="res://entities/weapons/weapon.tscn" id="1_2hcw8"]
+
+[node name="Harp" instance=ExtResource("1_2hcw8")]

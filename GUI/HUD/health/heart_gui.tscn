@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwvblpd44jfw0"]
+
+[ext_resource type="Script" uid="uid://c8sps27ygrxrj" path="res://GUI/HUD/health/heart_gui.gd" id="1_llsgp"]
+[ext_resource type="Texture2D" uid="uid://cmarnwr06hfo4" path="res://GUI/HUD/health/full_heart.png" id="2_t6my1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mw7vr"]
+
+[node name="HeartGUI" type="Panel"]
+custom_minimum_size = Vector2(20, 18)
+offset_right = 20.0
+offset_bottom = 18.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_mw7vr")
+script = ExtResource("1_llsgp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(9.75, 9.25)
+scale = Vector2(2.0555556, 1.9444444)
+texture = ExtResource("2_t6my1")
