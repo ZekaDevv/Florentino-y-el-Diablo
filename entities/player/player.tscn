@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b3sky51l2wo47"]
+[gd_scene load_steps=19 format=3 uid="uid://b3sky51l2wo47"]
 
 [ext_resource type="SpriteFrames" uid="uid://12bc4iysidab" path="res://entities/player/player.tres" id="1_pwxuj"]
 [ext_resource type="Script" uid="uid://dffq5hgf2v4tf" path="res://entities/player/player.gd" id="1_ycxet"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://mq5ix0asbmrb" path="res://entities/bullet/bullet_types/bullet_weak.tscn" id="4_afbqv"]
 [ext_resource type="PackedScene" uid="uid://cgxujxt0vo28a" path="res://entities/weapons/weapon_types/drum.tscn" id="4_fkugw"]
 [ext_resource type="PackedScene" uid="uid://cf26lt1a2neto" path="res://components/healt/health_component.tscn" id="4_gd5fs"]
+[ext_resource type="PackedScene" uid="uid://c6w1ni4spwjd5" path="res://entities/weapons/weapon_types/maracas.tscn" id="4_gx6sm"]
 [ext_resource type="Script" uid="uid://blqjmn1awtayw" path="res://entities/bullet/BulletBase.gd" id="5_bectd"]
 [ext_resource type="Script" uid="uid://c43bltohinw76" path="res://entities/player/hurtbox.gd" id="5_yqwn8"]
 [ext_resource type="Texture2D" uid="uid://d3itoi8sor0r7" path="res://assets/bullets/shot_1.png" id="6_wvtmh"]
@@ -20,7 +21,7 @@ size = Vector2(17, 24)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2kyv7"]
 size = Vector2(12, 12)
 
-[sub_resource type="PackedScene" id="PackedScene_j3ovn"]
+[sub_resource type="PackedScene" id="PackedScene_afbqv"]
 resource_local_to_scene = true
 _bundled = {
 "conn_count": 0,
@@ -54,19 +55,20 @@ limit_smoothed = true
 
 [node name="Weapon" type="Node2D" parent="."]
 
-[node name="Drum" parent="Weapon" instance=ExtResource("4_fkugw")]
+[node name="Maracas" parent="Weapon" instance=ExtResource("4_gx6sm")]
+shoot_pattern = 3
+bullet_count = 2.0
+burst_delay = 0.25
+spawn_margin = 15.0
+arc_spread = 10.0
 
-[node name="Base" parent="Weapon" instance=ExtResource("3_fkugw")]
+[node name="Cuatro" parent="Weapon" instance=ExtResource("3_wvtmh")]
 visible = false
-scene_bullet = SubResource("PackedScene_j3ovn")
 
 [node name="Guitar" parent="Weapon" instance=ExtResource("3_qiwj3")]
 visible = false
 shoot_pattern = 1
 cooldown = 0.5
-
-[node name="Cuatro" parent="Weapon" instance=ExtResource("3_wvtmh")]
-visible = false
 
 [node name="Harp" parent="Weapon" instance=ExtResource("3_j3ovn")]
 visible = false
@@ -74,6 +76,13 @@ shoot_pattern = 4
 scene_bullet = ExtResource("4_afbqv")
 cooldown = 0.35
 bullet_count = 11.0
+
+[node name="Drum" parent="Weapon" instance=ExtResource("4_fkugw")]
+visible = false
+
+[node name="Base" parent="Weapon" instance=ExtResource("3_fkugw")]
+visible = false
+scene_bullet = SubResource("PackedScene_afbqv")
 
 [node name="HealthComponent" parent="." instance=ExtResource("4_gd5fs")]
 max_health = 9
