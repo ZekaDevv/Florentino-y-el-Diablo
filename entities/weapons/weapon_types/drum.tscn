@@ -9,3 +9,4 @@ scene_bullet = ExtResource("2_km8qn")
 cooldown = 0.5
 inertia_factor = 0.0
 bullet_count = 16.0
+spawn_margin = 10.0
