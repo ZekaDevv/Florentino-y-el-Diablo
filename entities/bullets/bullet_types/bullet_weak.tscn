@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://mq5ix0asbmrb"]
 
-[ext_resource type="PackedScene" uid="uid://bifle5qxdda0c" path="res://entities/bullet/BulletBase.tscn" id="1_hpx0a"]
+[ext_resource type="PackedScene" uid="uid://bifle5qxdda0c" path="res://entities/bullets/BulletBase.tscn" id="1_hpx0a"]
 
 [node name="BulletWeak" instance=ExtResource("1_hpx0a")]
 damage = 0.2

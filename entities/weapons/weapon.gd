@@ -10,11 +10,11 @@ enum ShootPattern {BASE, ARC, RADIAL, DOUBLE, FAN}
 @export_range(0.0, 1.0) var inertia_factor: float = 0.5
 
 @export_group("pattern_configuration")
-@export var bullet_count: float = 1.0
+@export var bullet_count: int = 1
 @export var burst_delay: float = 0.1
 @export var spawn_margin: float = 15.0
 @export var arc_spread: float = 40.0
-@export var double_spawn_margin = 10.0
+@export_range(0.0, 360.0) var fan_angle: float = 160.0
 
 var can_shoot = true
 
@@ -63,7 +63,7 @@ func shoot(dir: Vector2, source_velocity: Vector2) -> void:
 				_spawn_bullet_offset(dir, source_velocity, _final_offset)
 
 		ShootPattern.FAN:
-			var _total_radians = deg_to_rad(160)
+			var _total_radians = deg_to_rad(fan_angle)
 			var _start_angle = -_total_radians / 2.0
 			
 			var step = 0
@@ -77,7 +77,7 @@ func shoot(dir: Vector2, source_velocity: Vector2) -> void:
 				_spawn_bullet(_fan_dir, source_velocity)
 
 		ShootPattern.RADIAL:
-			var _angle_step: float = (360 / bullet_count)
+			var _angle_step: float = (360.0 / bullet_count)
 			
 			for i in range(bullet_count):
 				var _degrees = _angle_step * i

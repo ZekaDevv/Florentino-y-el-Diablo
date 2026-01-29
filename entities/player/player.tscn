@@ -7,13 +7,13 @@
 [ext_resource type="PackedScene" uid="uid://cm4iqlnpjscd6" path="res://entities/weapons/weapon_types/harp.tscn" id="3_j3ovn"]
 [ext_resource type="PackedScene" uid="uid://d3osccu7e4pcm" path="res://entities/weapons/weapon_types/guitar.tscn" id="3_qiwj3"]
 [ext_resource type="PackedScene" uid="uid://bfykcfykr583g" path="res://entities/weapons/weapon_types/cuatro.tscn" id="3_wvtmh"]
-[ext_resource type="PackedScene" uid="uid://mq5ix0asbmrb" path="res://entities/bullet/bullet_types/bullet_weak.tscn" id="4_afbqv"]
+[ext_resource type="PackedScene" uid="uid://mq5ix0asbmrb" path="res://entities/bullets/bullet_types/bullet_weak.tscn" id="4_afbqv"]
 [ext_resource type="PackedScene" uid="uid://cgxujxt0vo28a" path="res://entities/weapons/weapon_types/drum.tscn" id="4_fkugw"]
-[ext_resource type="PackedScene" uid="uid://cf26lt1a2neto" path="res://components/healt/health_component.tscn" id="4_gd5fs"]
-[ext_resource type="Script" uid="uid://blqjmn1awtayw" path="res://entities/bullet/BulletBase.gd" id="5_bectd"]
+[ext_resource type="PackedScene" uid="uid://cf26lt1a2neto" path="res://components/health/health_component.tscn" id="4_gd5fs"]
+[ext_resource type="Script" uid="uid://blqjmn1awtayw" path="res://entities/bullets/BulletBase.gd" id="5_bectd"]
 [ext_resource type="Script" uid="uid://c43bltohinw76" path="res://entities/player/hurtbox.gd" id="5_yqwn8"]
 [ext_resource type="Texture2D" uid="uid://d3itoi8sor0r7" path="res://assets/bullets/shot_1.png" id="6_wvtmh"]
-[ext_resource type="Script" uid="uid://b7ew7k5b4k7n" path="res://entities/bullet/hitbox.gd" id="7_7thud"]
+[ext_resource type="Script" uid="uid://b7ew7k5b4k7n" path="res://entities/bullets/hitbox.gd" id="7_7thud"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_41hvs"]
 size = Vector2(17, 24)

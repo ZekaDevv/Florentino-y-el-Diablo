@@ -13,7 +13,7 @@ var _remember_shot_direction: bool = false
 var _current_weapon: Weapon
 
 func _ready():
-	health_component.health_depleted.connect(death_player)
+	health_component.health_depleted.connect(_on_death)
 
 func _physics_process(delta: float) -> void:
 	if weapon_holder.get_child_count() > 0:
@@ -62,7 +62,7 @@ func _animation_player(shot_input: Vector2) -> void:
 		sprite_animation.play("idle")
 
 
-func death_player() -> void:
+func _on_death() -> void:
 	set_physics_process(false)
 	sprite_animation.play("idle")
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cehmd0lbu73u2"
-path="res://.godot/imported/notalirical.png-584a31c47c496032042203280a01ce16.ctex"
+path="res://.godot/imported/shot_2.png-0add75eb1b6caf348cfb316537df2e47.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bullets/notalirical.png"
-dest_files=["res://.godot/imported/notalirical.png-584a31c47c496032042203280a01ce16.ctex"]
+source_file="res://assets/bullets/shot_2.png"
+dest_files=["res://.godot/imported/shot_2.png-0add75eb1b6caf348cfb316537df2e47.ctex"]
 
 [params]
 

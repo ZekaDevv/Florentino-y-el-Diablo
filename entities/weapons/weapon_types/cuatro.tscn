@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bfykcfykr583g"]
 
 [ext_resource type="PackedScene" uid="uid://cqkui8b761lwd" path="res://entities/weapons/weapon.tscn" id="1_4eh4c"]
-[ext_resource type="PackedScene" uid="uid://bcjprw43abw1n" path="res://entities/bullet/bullet_types/bullet_short.tscn" id="2_i7g6a"]
+[ext_resource type="PackedScene" uid="uid://bcjprw43abw1n" path="res://entities/bullets/bullet_types/bullet_short.tscn" id="2_i7g6a"]
 
 [node name="Cuatro" instance=ExtResource("1_4eh4c")]
 shoot_pattern = 1

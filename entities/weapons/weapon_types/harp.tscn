@@ -3,3 +3,4 @@
 [ext_resource type="PackedScene" uid="uid://cqkui8b761lwd" path="res://entities/weapons/weapon.tscn" id="1_2hcw8"]
 
 [node name="Harp" instance=ExtResource("1_2hcw8")]
+spawn_margin = 15.0
