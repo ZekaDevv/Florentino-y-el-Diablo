@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://b3sky51l2wo47" path="res://entities/player/player.tscn" id="2_xbkjx"]
 
 [node name="sala 1 Josuess" type="Node2D"]
+position = Vector2(-2, -2)
 
 [node name="Floor" type="TileMapLayer" parent="."]
 position = Vector2(0, 8)

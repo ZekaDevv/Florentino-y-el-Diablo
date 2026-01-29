@@ -58,15 +58,13 @@ down_shot={
 
 [layer_names]
 
-2d_render/layer_1="Player"
-2d_render/layer_2="Entities"
-2d_render/layer_3="ED"
-2d_render/layer_4="ED"
-2d_render/layer_5="EI"
-2d_physics/layer_1="Player"
-2d_physics/layer_2="Walls"
-2d_physics/layer_3="Bullets"
-2d_physics/layer_4="IE"
+2d_physics/layer_1="World"
+2d_physics/layer_2="Player"
+2d_physics/layer_3="PlayerHurtbox"
+2d_physics/layer_4="Enemy"
+2d_physics/layer_5="EnemyHurtbox"
+2d_physics/layer_6="PlayerAttacks"
+2d_physics/layer_7="EnemyAttacks"
 avoidance/layer_1="Entities"
 avoidance/layer_2="Bullets"
 avoidance/layer_3="Walls"

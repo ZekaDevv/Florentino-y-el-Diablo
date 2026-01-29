@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dge6u0kxo6nh5"]
+
+[ext_resource type="Script" uid="uid://c43bltohinw76" path="res://components/hurtbox/hurtbox_component.gd" id="1_moset"]
+
+[node name="hurtbox_component" type="Area2D"]
+collision_layer = 0
+collision_mask = 0
+monitoring = false
+script = ExtResource("1_moset")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]

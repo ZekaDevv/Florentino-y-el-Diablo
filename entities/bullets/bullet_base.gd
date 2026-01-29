@@ -6,7 +6,7 @@ class_name BaseBullet
 @export var speed: int = 300
 @export var life_time: float = 1
 
-@onready var hitbox = $Hitbox
+@onready var hitbox = $HitboxComponentBullet
 
 var direction: Vector2 = Vector2.RIGHT
 var player_inertia: Vector2 = Vector2.ZERO

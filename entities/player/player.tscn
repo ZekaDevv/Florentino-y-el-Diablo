@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://b3sky51l2wo47"]
+[gd_scene load_steps=18 format=3 uid="uid://b3sky51l2wo47"]
 
 [ext_resource type="SpriteFrames" uid="uid://12bc4iysidab" path="res://entities/player/player.tres" id="1_pwxuj"]
 [ext_resource type="Script" uid="uid://dffq5hgf2v4tf" path="res://entities/player/player.gd" id="1_ycxet"]
@@ -10,10 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://mq5ix0asbmrb" path="res://entities/bullets/bullet_types/bullet_weak.tscn" id="4_afbqv"]
 [ext_resource type="PackedScene" uid="uid://cgxujxt0vo28a" path="res://entities/weapons/weapon_types/drum.tscn" id="4_fkugw"]
 [ext_resource type="PackedScene" uid="uid://cf26lt1a2neto" path="res://components/health/health_component.tscn" id="4_gd5fs"]
-[ext_resource type="Script" uid="uid://blqjmn1awtayw" path="res://entities/bullets/BulletBase.gd" id="5_bectd"]
-[ext_resource type="Script" uid="uid://c43bltohinw76" path="res://entities/player/hurtbox.gd" id="5_yqwn8"]
+[ext_resource type="Script" uid="uid://blqjmn1awtayw" path="res://entities/bullets/bullet_base.gd" id="5_bectd"]
 [ext_resource type="Texture2D" uid="uid://d3itoi8sor0r7" path="res://assets/bullets/shot_1.png" id="6_wvtmh"]
-[ext_resource type="Script" uid="uid://b7ew7k5b4k7n" path="res://entities/bullets/hitbox.gd" id="7_7thud"]
+[ext_resource type="Script" uid="uid://b7ew7k5b4k7n" path="res://components/hitbox/hitbox_component.gd" id="7_7thud"]
+[ext_resource type="PackedScene" uid="uid://cvrxfsw1ouli" path="res://components/hurtbox/hurtbox_types/hurtbox_component_player.tscn" id="14_afbqv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_41hvs"]
 size = Vector2(17, 24)
@@ -35,10 +35,9 @@ _bundled = {
 "version": 3
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ex5d7"]
-size = Vector2(17, 24)
-
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_ycxet")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -57,7 +56,6 @@ limit_smoothed = true
 
 [node name="Maracas" parent="Weapon" instance=ExtResource("3_afbqv")]
 scene_bullet = ExtResource("4_afbqv")
-inertia_factor = 0.2
 spawn_margin = 0.0
 arc_spread = 15.0
 
@@ -85,11 +83,4 @@ scene_bullet = SubResource("PackedScene_afbqv")
 
 [node name="HealthComponent" parent="." instance=ExtResource("4_gd5fs")]
 
-[node name="Hurtbox" type="Area2D" parent="."]
-script = ExtResource("5_yqwn8")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
-light_mask = 0
-position = Vector2(-0.5, 0)
-shape = SubResource("RectangleShape2D_ex5d7")
-debug_color = Color(0, 0, 0, 0.41960785)
+[node name="HurtboxComponentPlayer" parent="." instance=ExtResource("14_afbqv")]

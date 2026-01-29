@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://bifle5qxdda0c"]
+
+[ext_resource type="Script" uid="uid://blqjmn1awtayw" path="res://entities/bullets/bullet_base.gd" id="1_1ausg"]
+[ext_resource type="Texture2D" uid="uid://d3itoi8sor0r7" path="res://assets/bullets/shot_1.png" id="2_1ausg"]
+[ext_resource type="PackedScene" uid="uid://dyrg1f7nhsp37" path="res://components/hitbox/hitbox_types/hitbox_component_bullet.tscn" id="3_kwtpj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kwtpj"]
+size = Vector2(12, 12)
+
+[node name="BulletBase" type="Area2D"]
+collision_layer = 32
+script = ExtResource("1_1ausg")
+speed = 200
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_kwtpj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_1ausg")
+
+[node name="HitboxComponentBullet" parent="." instance=ExtResource("3_kwtpj")]
