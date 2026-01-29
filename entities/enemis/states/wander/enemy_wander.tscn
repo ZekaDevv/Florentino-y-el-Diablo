@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b45g6i1r4p37x"]
+
+[ext_resource type="Script" uid="uid://r22eatk3qby2" path="res://entities/enemis/states/wander/enemy_wander.gd" id="1_ghvf3"]
+
+[node name="EnemyWander" type="Node"]
+script = ExtResource("1_ghvf3")

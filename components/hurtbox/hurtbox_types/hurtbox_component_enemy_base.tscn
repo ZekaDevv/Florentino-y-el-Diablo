@@ -2,11 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://dge6u0kxo6nh5" path="res://components/hurtbox/hurtbox_component.tscn" id="1_gu5db"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5tgy4"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gu5db"]
 size = Vector2(18, 26)
 
 [node name="HurtboxComponentEnemyBase" instance=ExtResource("1_gu5db")]
 collision_layer = 16
 
 [node name="CollisionShape2D" parent="." index="0"]
-shape = SubResource("RectangleShape2D_5tgy4")
+shape = SubResource("RectangleShape2D_gu5db")

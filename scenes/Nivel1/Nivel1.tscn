@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=4 uid="uid://coke443b1bhtk"]
+[gd_scene load_steps=6 format=4 uid="uid://coke443b1bhtk"]
 
 [ext_resource type="TileSet" uid="uid://br65u3fvixncs" path="res://resources/tilesets/world.tres" id="1_d8ihg"]
 [ext_resource type="Script" uid="uid://2bjm3lvk32lw" path="res://scenes/Nivel1/nivel_1.gd" id="1_ocf45"]
 [ext_resource type="PackedScene" uid="uid://b6afcx1yc8jpf" path="res://GUI/gui.tscn" id="2_1488l"]
 [ext_resource type="PackedScene" uid="uid://b3sky51l2wo47" path="res://entities/player/player.tscn" id="2_pb1nm"]
 [ext_resource type="PackedScene" uid="uid://b4kqwj3d4yw2l" path="res://scenes/Prueba Daño/area_2d.tscn" id="4_1488l"]
-[ext_resource type="PackedScene" uid="uid://n5vr1f8vrqjx" path="res://entities/enemiis/enemy_base.tscn" id="5_62wm5"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_ocf45")
@@ -23,11 +22,8 @@ tile_set = ExtResource("1_d8ihg")
 [node name="Area2D" parent="." instance=ExtResource("4_1488l")]
 position = Vector2(40, -61)
 
-[node name="EnemyBase" parent="." instance=ExtResource("5_62wm5")]
-position = Vector2(61, 0)
-
 [node name="Player" parent="." instance=ExtResource("2_pb1nm")]
-position = Vector2(-41, 6)
+position = Vector2(-42, 7)
 
 [node name="Wall" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAD4//r/AAABAAAAAAD4//v/AAABAAEAAAD5//r/AAABAAAAAAD5//v/AAABAAEAAAD6//r/AAABAAAAAAD6//v/AAABAAEAAAD7//r/AAABAAAAAAD7//v/AAABAAEAAAD8//r/AAABAAAAAAD8//v/AAABAAEAAAD9//r/AAABAAAAAAD9//v/AAABAAEAAAD+//r/AAABAAAAAAD+//v/AAABAAEAAAD///r/AAABAAAAAAD///v/AAABAAEAAAAAAPr/AAABAAAAAAAAAPv/AAABAAEAAAABAPr/AAABAAAAAAABAPv/AAABAAEAAAACAPr/AAABAAAAAAACAPv/AAABAAEAAAADAPr/AAABAAAAAAADAPv/AAABAAEAAAAEAPr/AAABAAAAAAAEAPv/AAABAAEAAAAFAPr/AAABAAAAAAAFAPv/AAABAAEAAAAGAPr/AAABAAAAAAAGAPv/AAABAAEAAAAHAPr/AAABAAAAAAAHAPv/AAABAAEAAAD3//r/AAAAAAAAAAD3//v/AAAAAAEAAAAIAPr/AAAFAAAAAAAIAPv/AAAFAAEAAAD3//z/AAAAAAIAAAD3//3/AAAAAAMAAAD3//7/AAAAAAIAAAD3////AAAAAAMAAAD3/wAAAAAAAAIAAAD3/wEAAAAAAAMAAAD3/wIAAAAAAAIAAAD3/wMAAAAAAAQAAAAIAAEAAAAFAAIAAAAIAAIAAAAFAAMAAAAIAP//AAAFAAIAAAAIAAAAAAAFAAMAAAAIAP3/AAAFAAMAAAAIAP7/AAAFAAMAAAAIAPz/AAAFAAIAAAD3/wQAAAAAAAUAAAD4/wQAAAABAAAAAAD5/wQAAAACAAAAAAD6/wQAAAADAAAAAAD7/wQAAAABAAAAAAD8/wQAAAACAAAAAAD9/wQAAAADAAAAAAD+/wQAAAABAAAAAAD//wQAAAACAAAAAAAAAAQAAAADAAAAAAABAAQAAAABAAAAAAACAAQAAAACAAAAAAADAAQAAAADAAAAAAAEAAQAAAABAAAAAAAFAAQAAAACAAAAAAAGAAQAAAADAAAAAAAHAAQAAAABAAAAAAAIAAQAAAAFAAQAAAAIAAMAAAAFAAIAAAANAP3/AQAAAAMAAAANAPz/AQAAAAMAAAANAPv/AQAAAAMAAAA=")
