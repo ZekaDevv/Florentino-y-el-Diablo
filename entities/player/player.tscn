@@ -55,7 +55,14 @@ limit_smoothed = true
 
 [node name="Weapon" type="Node2D" parent="."]
 
+[node name="Maracas" parent="Weapon" instance=ExtResource("3_afbqv")]
+scene_bullet = ExtResource("4_afbqv")
+inertia_factor = 0.2
+spawn_margin = 0.0
+arc_spread = 15.0
+
 [node name="Harp" parent="Weapon" instance=ExtResource("3_j3ovn")]
+visible = false
 shoot_pattern = 4
 scene_bullet = ExtResource("4_afbqv")
 cooldown = 0.35
@@ -71,12 +78,6 @@ cooldown = 0.5
 
 [node name="Drum" parent="Weapon" instance=ExtResource("4_fkugw")]
 visible = false
-
-[node name="Maracas" parent="Weapon" instance=ExtResource("3_afbqv")]
-visible = false
-scene_bullet = ExtResource("4_afbqv")
-spawn_margin = 0.0
-arc_spread = 15.0
 
 [node name="Base" parent="Weapon" instance=ExtResource("3_fkugw")]
 visible = false

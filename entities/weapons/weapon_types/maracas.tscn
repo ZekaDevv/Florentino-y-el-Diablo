@@ -5,6 +5,7 @@
 [node name="Maracas" instance=ExtResource("1_6lv5i")]
 shoot_pattern = 3
 cooldown = 0.5
+inertia_factor = 0.2
 bullet_count = 2.0
 burst_delay = 0.15
 spawn_margin = 15.0
