@@ -8,9 +8,9 @@ var current_state: State
 var states: Dictionary
 
 func init(enemy: CharacterBody2D) -> void:
-  
+	
 	for child in get_children():
-		if "enemy" in child:
+		if child is State:
 			child.enemy = enemy
 			child.state_machine = self
 			states[child.name.to_lower()] = child
