@@ -48,7 +48,7 @@ func _physics_process(delta: float) -> void:
 func _animation_player(shot_input: Vector2) -> void:
 
 	if shot_input.x != 0:
-		_remember_shot_direction = shot_input .x < 0 
+		_remember_shot_direction = shot_input.x < 0 
 		sprite_animation.flip_h = _remember_shot_direction
 
 	elif velocity.x != 0:
@@ -65,5 +65,3 @@ func _animation_player(shot_input: Vector2) -> void:
 func _on_death() -> void:
 	set_physics_process(false)
 	sprite_animation.play("idle")
-
-	modulate = Color(0.5, 0, 0)

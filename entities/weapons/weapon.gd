@@ -4,14 +4,14 @@ class_name Weapon
 enum ShootPattern {BASE, ARC, RADIAL, DOUBLE, FAN}
 
 @export_group("weapon_configuration")
-@export var shoot_pattern: ShootPattern = ShootPattern.RADIAL
+@export var shoot_pattern: ShootPattern = ShootPattern.BASE
 @export var scene_bullet: PackedScene
 @export var cooldown: float = 0.25
 @export_range(0.0, 1.0) var inertia_factor: float = 0.5
 
 @export_group("pattern_configuration")
 @export var bullet_count: int = 1
-@export var burst_delay: float = 0.1
+@export var burst_delay: float = 0
 @export var spawn_margin: float = 15.0
 @export var arc_spread: float = 40.0
 @export_range(0.0, 360.0) var fan_angle: float = 160.0
@@ -33,6 +33,18 @@ func shoot(dir: Vector2, source_velocity: Vector2) -> void:
 		ShootPattern.BASE:
 			_spawn_bullet(dir, source_velocity)
 
+
+		ShootPattern.RADIAL:
+			var _angle_step: float = (360.0 / bullet_count)
+			
+			for i in range(bullet_count):
+				var _degrees = _angle_step * i
+				var _radians = deg_to_rad(_degrees)
+				var _radial_dir = dir.rotated(_radians)
+
+				_spawn_bullet(_radial_dir, source_velocity)
+			
+
 		ShootPattern.DOUBLE:
 			for i in range(bullet_count):
 				var _lateral_vector = dir.rotated(deg_to_rad(90))
@@ -45,6 +57,21 @@ func shoot(dir: Vector2, source_velocity: Vector2) -> void:
 				var _offset_down = _lateral_vector * _half_spread
 				_spawn_bullet_offset(dir, source_velocity, _offset_down)
 				
+
+		ShootPattern.FAN:
+			var _total_radians = deg_to_rad(fan_angle)
+			var _start_angle = -_total_radians / 2.0
+			
+			var step = 0
+			if bullet_count > 1:
+				step = _total_radians / (bullet_count - 1)
+			
+			for i in range(bullet_count):
+				var _current_angle = _start_angle + (step * i)
+				var _fan_dir = dir.rotated(_current_angle)
+				
+				_spawn_bullet(_fan_dir, source_velocity)
+
 
 		ShootPattern.ARC:
 			var _lateral_vector = dir.rotated(deg_to_rad(90))
@@ -62,33 +89,10 @@ func shoot(dir: Vector2, source_velocity: Vector2) -> void:
 
 				_spawn_bullet_offset(dir, source_velocity, _final_offset)
 
-		ShootPattern.FAN:
-			var _total_radians = deg_to_rad(fan_angle)
-			var _start_angle = -_total_radians / 2.0
-			
-			var step = 0
-			if bullet_count > 1:
-				step = _total_radians / (bullet_count - 1)
-			
-			for i in range(bullet_count):
-				var _current_angle = _start_angle + (step * i)
-				var _fan_dir = dir.rotated(_current_angle)
-				
-				_spawn_bullet(_fan_dir, source_velocity)
-
-		ShootPattern.RADIAL:
-			var _angle_step: float = (360.0 / bullet_count)
-			
-			for i in range(bullet_count):
-				var _degrees = _angle_step * i
-				var _radians = deg_to_rad(_degrees)
-				var _radial_dir = dir.rotated(_radians)
-
-				_spawn_bullet(_radial_dir, source_velocity)
-			
 
 func _spawn_bullet(dir: Vector2, source_vel: Vector2) -> void:
 	_spawn_bullet_offset(dir, source_vel, Vector2.ZERO)
+	
 	
 func _spawn_bullet_offset(dir: Vector2, source_velocity: Vector2, extra_offset: Vector2) -> void:
 	var bullet = scene_bullet.instantiate()
@@ -100,6 +104,6 @@ func _spawn_bullet_offset(dir: Vector2, source_velocity: Vector2, extra_offset: 
 
 	get_tree().current_scene.add_child(bullet)
 
-	var centro = muzzle.global_position
+	var center = muzzle.global_position
 	var margen_frontal = dir * spawn_margin
-	bullet.global_position = centro + margen_frontal + extra_offset
+	bullet.global_position = center + margen_frontal + extra_offset

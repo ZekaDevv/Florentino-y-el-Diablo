@@ -42,7 +42,8 @@ script = ExtResource("1_ycxet")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("1_pwxuj")
-animation = &"idle"
+animation = &"walk"
+frame_progress = 0.52557564
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 0)
@@ -56,6 +57,7 @@ limit_smoothed = true
 
 [node name="Maracas" parent="Weapon" instance=ExtResource("3_afbqv")]
 scene_bullet = ExtResource("4_afbqv")
+bullet_count = 2
 spawn_margin = 0.0
 arc_spread = 15.0
 
@@ -64,18 +66,21 @@ visible = false
 shoot_pattern = 4
 scene_bullet = ExtResource("4_afbqv")
 cooldown = 0.35
-bullet_count = 11.0
 
 [node name="Cuatro" parent="Weapon" instance=ExtResource("3_wvtmh")]
 visible = false
+bullet_count = 1
 
 [node name="Guitar" parent="Weapon" instance=ExtResource("3_qiwj3")]
 visible = false
 shoot_pattern = 1
 cooldown = 0.5
+bullet_count = 1
 
 [node name="Drum" parent="Weapon" instance=ExtResource("4_fkugw")]
 visible = false
+shoot_pattern = 0
+bullet_count = 1
 
 [node name="Base" parent="Weapon" instance=ExtResource("3_fkugw")]
 visible = false
