@@ -13,9 +13,16 @@ var _remember_shot_direction: bool = false
 var _current_weapon: Weapon
 
 func _ready():
+	add_to_group("player")
 	health_component.health_depleted.connect(_on_death)
 
 func _physics_process(delta: float) -> void:
+	if GameManager.is_dialog_active:
+		sprite_animation.play("idle")
+		velocity = Vector2.ZERO
+		return
+
+
 	if weapon_holder.get_child_count() > 0:
 		var child = weapon_holder.get_child(0)
 		_current_weapon = child

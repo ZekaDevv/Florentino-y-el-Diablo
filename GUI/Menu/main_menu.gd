@@ -1,8 +1,8 @@
 extends Control
 
-@onready var slider_master: HSlider = $MarginContainer/HBoxContainer/LeftColumn/OptionsMenu/VBoxContainer/GridContainer/SliderMaster
-@onready var slider_music: HSlider = $MarginContainer/HBoxContainer/LeftColumn/OptionsMenu/VBoxContainer/GridContainer/SliderMusic
-@onready var slider_sfx: HSlider = $MarginContainer/HBoxContainer/LeftColumn/OptionsMenu/VBoxContainer/GridContainer/SliderSFX
+@onready var slider_master: HSlider = $MarginContainer/HBoxContainer/LeftColumn/OptionsContainer/GridContainer/SliderMaster
+@onready var slider_music: HSlider = $MarginContainer/HBoxContainer/LeftColumn/OptionsContainer/GridContainer/SliderMusic
+@onready var slider_sfx: HSlider = $MarginContainer/HBoxContainer/LeftColumn/OptionsContainer/GridContainer/SliderSFX
 
 @onready var buttons_container: VBoxContainer = $MarginContainer/HBoxContainer/LeftColumn/ButtonsContainer
 @onready var options_container: VBoxContainer = $MarginContainer/HBoxContainer/LeftColumn/OptionsContainer 
@@ -12,9 +12,9 @@ func _ready():
 	options_container.visible = false
 	buttons_container.visible = true
 
-	#slider_master.value = db_to_linear(AudioServer.get_bus_volume_db(0))
-	#slider_music.value = db_to_linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Music")))
-	#slider_sfx.value = db_to_linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("SFX")))
+	slider_master.value = db_to_linear(AudioServer.get_bus_volume_db(0))
+	slider_music.value = db_to_linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Music")))
+	slider_sfx.value = db_to_linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("SFX")))
 
 
 

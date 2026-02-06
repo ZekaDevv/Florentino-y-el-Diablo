@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://djfjifon3k6yn"
+path="res://.godot/imported/duglas_dialogue.dialogue-ccefd408fd8dc10675b81b71f352846b.tres"
+
+[deps]
+
+source_file="res://dialogues/NPCs/duglas/duglas_dialogue.dialogue"
+dest_files=["res://.godot/imported/duglas_dialogue.dialogue-ccefd408fd8dc10675b81b71f352846b.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2xixm41tkrhq"]
+
+[ext_resource type="Script" uid="uid://c1k2ox8ndd3vv" path="res://entities/NPCs/npc_base.gd" id="1_wtauc"]
+[ext_resource type="SpriteFrames" uid="uid://rn17e7qhqpd5" path="res://entities/NPCs/icon.tres" id="2_qp3hc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qp3hc"]
+size = Vector2(22, 32)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wtauc"]
+radius = 58.034473
+
+[node name="NPC_Base" type="StaticBody2D"]
+collision_layer = 6
+script = ExtResource("1_wtauc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_qp3hc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+animation = &""
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_wtauc")
+debug_color = Color(0.70196074, 0.010968137, 0, 0.41960785)
+
+[node name="InteractIcon" type="AnimatedSprite2D" parent="."]
+position = Vector2(2.3841858e-07, -32.000004)
+scale = Vector2(0.875, 0.9375)
+sprite_frames = ExtResource("2_qp3hc")
+animation = &"idle"
+frame_progress = 0.5620463
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
