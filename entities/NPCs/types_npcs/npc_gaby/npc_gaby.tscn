@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3s6kufs1r64a"]
+
+[ext_resource type="PackedScene" uid="uid://c2xixm41tkrhq" path="res://entities/NPCs/npc_base.tscn" id="1_0ijqx"]
+[ext_resource type="Resource" uid="uid://cncxukgeuy5r0" path="res://dialogues/NPCs/gaby/gaby.dialogue" id="2_bwfa7"]
+[ext_resource type="SpriteFrames" uid="uid://dqjwlhg73lfpf" path="res://entities/NPCs/types_npcs/npc_gaby/npc_gaby.tres" id="3_5b11b"]
+
+[node name="GabyNPCs" instance=ExtResource("1_0ijqx")]
+npc_name = "Gaby"
+dialogue_resource = ExtResource("2_bwfa7")
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = ExtResource("3_5b11b")
+animation = &"idle"

@@ -1,13 +1,17 @@
 [gd_scene load_steps=4 format=3 uid="uid://c07ktuvcenoao"]
 
-[ext_resource type="PackedScene" uid="uid://c2xixm41tkrhq" path="res://entities/NPCs/NPCBase.tscn" id="1_3buy0"]
-[ext_resource type="Resource" uid="uid://cncxukgeuy5r0" path="res://dialogues/NPCs/gaby/gaby_dialogue.dialogue" id="2_68bvg"]
+[ext_resource type="PackedScene" uid="uid://c2xixm41tkrhq" path="res://entities/NPCs/npc_base.tscn" id="1_3buy0"]
+[ext_resource type="Resource" uid="uid://b1r5xhpbx6b5c" path="res://dialogues/NPCs/cristina/cristina.dialogue" id="2_3buy0"]
 [ext_resource type="SpriteFrames" uid="uid://sv3ok62uuq4v" path="res://entities/NPCs/types_npcs/npc_cristina/npc_cristina.tres" id="3_tr6nn"]
 
-[node name="NPC_Base" instance=ExtResource("1_3buy0")]
+[node name="CristinaNPC" instance=ExtResource("1_3buy0")]
 npc_name = "Cristina"
-dialogue_resource = ExtResource("2_68bvg")
+dialogue_resource = ExtResource("2_3buy0")
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(0, -2)
 
 [node name="AnimatedSprite2D" parent="." index="1"]
+scale = Vector2(0.9375, 0.9375)
 sprite_frames = ExtResource("3_tr6nn")
 animation = &"idle"

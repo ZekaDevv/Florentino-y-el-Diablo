@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://53agtt78p2vq"]
+
+[ext_resource type="PackedScene" uid="uid://c2xixm41tkrhq" path="res://entities/NPCs/npc_base.tscn" id="1_0moyt"]
+[ext_resource type="Resource" uid="uid://d3y8dvet6eafw" path="res://dialogues/NPCs/leonardo/leonardo.dialogue" id="2_6ahj0"]
+[ext_resource type="SpriteFrames" uid="uid://dk7ygxj4uqrbk" path="res://entities/NPCs/types_npcs/npc_leonardo/npc_leonardo.tres" id="2_exn67"]
+
+[node name="LeonardoNPC" instance=ExtResource("1_0moyt")]
+npc_name = "Leonardo"
+dialogue_resource = ExtResource("2_6ahj0")
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = ExtResource("2_exn67")
+animation = &"idle"

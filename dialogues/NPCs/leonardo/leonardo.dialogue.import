@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://d3y8dvet6eafw"
+path="res://.godot/imported/leonardo.dialogue-3c7ba3b874d611dcd2494e2cefb28616.tres"
+
+[deps]
+
+source_file="res://dialogues/NPCs/leonardo/leonardo.dialogue"
+dest_files=["res://.godot/imported/leonardo.dialogue-3c7ba3b874d611dcd2494e2cefb28616.tres"]
+
+[params]
+
+defaults=true

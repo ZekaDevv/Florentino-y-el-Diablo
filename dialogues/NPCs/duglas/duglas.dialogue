@@ -1,0 +1,40 @@
+~ start
+
+% Duglas: [shake rate=20 level=10]¡Largo de aquí, muchacho![/shake] Ya bastante sal nos has traído hoy.
+% Duglas: ¿Qué buscas merodeando por mis tierras? ¿No te basta con el daño que ya hizo tu abuelo?
+% Duglas: ¡Epa! Ni un paso más cerca. No quiero que tu sombra toque mis cercas.
+
+~ opciones
+Duglas: [speed=0.6]Hueles a azufre y a desgracia.[/speed] Habla rápido antes de que te eche a patadas.
+
+- Mi abuelo no tiene la culpa de que se muera el ganado.
+	Duglas: [shake rate=30 level=15]¡¿Ah, no?! [/shake] Antes de que ese viejo loco retara al Diablo, aquí la tierra era generosa.
+	Duglas: Ahora las vacas se secan, el río trae lodo y tú caminas como si no pasara nada.
+	Duglas: Eres la viva imagen de Florentino... una mancha en este pueblo.
+	=> opciones
+
+- Cristina me vendió una empanada hace un rato...
+	Duglas: ¡Esa mujer mía no aprende! Vive con el corazón blando y la cabeza en las nubes.
+	Duglas: Mantente lejos de mi puesto y de mi mujer. No quiero que le pegues tu mala suerte.
+	=> opciones
+
+- ¿Dónde está Leonardo? Queríamos ir al río.
+	Duglas: [speed=0.4]A mi hijo no lo vuelves a nombrar.[/speed]
+	Duglas: Bastante trabajo me cuesta limpiar el rastro que dejas cuando juegas con él. 
+	Duglas: Leonardo va a ser un hombre de trabajo, no un vago coplero rodeado de fantasmas.
+	=> opciones
+
+- Algún día el pueblo sabrá la verdad.
+	Duglas: La única verdad es que desde que Florentino abrió esa boca en Santa Inés, nos condenó a todos.
+	Duglas: No hay verso que reviva a mis novillos, {{GameManager.name_player}}.
+	=> opciones
+
+- Ya me voy, no quiero problemas.
+	=> despedida
+
+~ despedida
+% Duglas: ¡Eso, corre donde el viejo! Que las sombras te guíen.
+% Duglas: ¡Y no te quiero ver cerca de Leonardo, oíste bien!
+% Duglas: ¡Vete antes de que se me muera otra vaca por tu culpa!
+
+=> END

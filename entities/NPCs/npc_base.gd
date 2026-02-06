@@ -23,12 +23,10 @@ func _process(_delta):
 
 
 func start_dialogue():
-	interact_icon.visible = false
 	GameManager.is_dialog_active = true
 	DialogueManager.show_example_dialogue_balloon(dialogue_resource, dialogue_start)
 
 func _on_dialogue_finished(_resource):
-	interact_icon.visible = true
 	await get_tree().create_timer(0.2).timeout
 	GameManager.is_dialog_active = false
 

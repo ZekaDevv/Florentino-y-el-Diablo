@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dnko34n6447vu"
+path="res://.godot/imported/florentino.dialogue-93bc534c3d43d9f6925d3fe235f9f336.tres"
+
+[deps]
+
+source_file="res://dialogues/NPCs/florentino/florentino.dialogue"
+dest_files=["res://.godot/imported/florentino.dialogue-93bc534c3d43d9f6925d3fe235f9f336.tres"]
+
+[params]
+
+defaults=true

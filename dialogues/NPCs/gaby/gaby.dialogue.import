@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cncxukgeuy5r0"
+path="res://.godot/imported/gaby.dialogue-88cd25e5ff5f3c73b00cd1a49ad1ed06.tres"
+
+[deps]
+
+source_file="res://dialogues/NPCs/gaby/gaby.dialogue"
+dest_files=["res://.godot/imported/gaby.dialogue-88cd25e5ff5f3c73b00cd1a49ad1ed06.tres"]
+
+[params]
+
+defaults=true

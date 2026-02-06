@@ -1,0 +1,50 @@
+~ start
+
+{{GameManager.name_player}}: [[Abuelo, ¿estás despierto? | Hola, abuelo... ¿puedo hablar contigo? | Abuelo, el pueblo está muy silencioso hoy.]]
+
+% Florentino: Dios te bendiga, nieto mío. ¿Qué te trae por este rincón olvidado?
+% Florentino: Ah, muchacho... vienes a visitar a este viejo "mal agüero", ¿verdad?
+% Florentino: Te he dicho que no te acerques tanto, hijo. El pueblo habla... y sus palabras pesan.
+
+~ opciones
+Florentino: Dime, {{GameManager.name_player}}... ¿qué es lo que quieres saber realmente?
+- {{GameManager.name_player}}: Cuéntame la verdadera leyenda de Santa Inés.
+	Florentino: Fue en Santa Inés, bajo una noche que parecía no tener fin.
+	Florentino: Le gané al [wave]Maligno[/wave] verso a verso... pero la victoria tuvo un precio.
+	Florentino: El orgullo es una grieta por donde el diablo se cuela, incluso cuando pierde.
+	=> opciones
+
+- {{GameManager.name_player}}: ¿Por qué la gente te mira con tanto odio?
+	Florentino: El miedo es más contagioso que la peste, nieto. 
+	Florentino: Dicen que atraigo las sombras, que soy como un [speed=0.5]gato negro[/speed] en el camino.
+	Florentino: No perdonan que un hombre haya retado al infierno y haya vuelto para contarlo.
+	=> opciones
+
+- {{GameManager.name_player}}: Abuelo... yo quiero ser un coplero como tú.
+	Florentino: [speed=0.2]¡No! [/speed]
+	Florentino: Ser leyenda es cargar con un saco de piedras que nadie te ayuda a llevar.
+	Florentino: Busca tu propio camino, uno que no huela a azufre ni a soledad.
+	=> opciones
+
+- {{GameManager.name_player}}: ¿Es verdad que el diablo aún te persigue?
+	Florentino: El [wave]Diablo[/wave] no olvida una deuda de honor.
+	Florentino: Él no quiere mi alma, quiere mi paz... y a través de mí, quiere la tuya.
+	Florentino: La maldición de este pueblo es su última jugada.
+	=> opciones
+
+- {{GameManager.name_player}}: ¿Crees que algún día podré limpiar nuestro nombre?
+	Florentino: Tienes mi sangre, y veo en tus ojos una chispa que ni el viento de Barinas apaga.
+	Florentino: Si logras limpiar este nombre manchado... serás mucho más de lo que yo fui.
+	=> opciones
+
+- {{GameManager.name_player}}: Debo irme, abuelo. (Despedirse)
+	=> despedida
+
+~ despedida
+{{GameManager.name_player}}: [[Te dejo descansar. | Cuídate mucho, abuelo. | Volveré más tarde con algo de comer.]]
+
+% Florentino: Ve con Dios, pero no te alejes mucho del camino real.
+% Florentino: Cuídate del silbido del viento, hijo. A veces no es solo aire.
+% Florentino: Ya habrá tiempo de más cuentos. Anda, descansa.
+
+=> END

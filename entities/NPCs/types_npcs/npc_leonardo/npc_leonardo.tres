@@ -1,0 +1,25 @@
+[gd_resource type="SpriteFrames" load_steps=4 format=3 uid="uid://dk7ygxj4uqrbk"]
+
+[ext_resource type="Texture2D" uid="uid://dnj8yrqs3r4df" path="res://assets/characters/npcs/niño_sifrino_frame-Sheet.png" id="1_a0ywp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p40js"]
+atlas = ExtResource("1_a0ywp")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iykyv"]
+atlas = ExtResource("1_a0ywp")
+region = Rect2(32, 0, 32, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p40js")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iykyv")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]

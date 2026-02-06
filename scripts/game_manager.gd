@@ -1,11 +1,14 @@
 extends Node
 
+var name_player: String = "Arturo"
+var gold: int = 0
+
 var music_volume: float = 1.0
 var sfx_volume: float = 1.0
 
 var is_dialog_active: bool = false;
 
 func load_game_scene():
-	get_tree().change_scene_to_file("res://scenes/Nivel1/Nivel1.tscn")
+	get_tree().change_scene_to_file("res://scenes/PUEBLO/PuebloPrincipal.tscn")
 func quit_game():
 	get_tree().quit()

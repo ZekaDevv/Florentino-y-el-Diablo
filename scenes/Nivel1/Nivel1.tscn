@@ -1,13 +1,15 @@
-[gd_scene load_steps=9 format=4 uid="uid://coke443b1bhtk"]
+[gd_scene load_steps=11 format=4 uid="uid://coke443b1bhtk"]
 
-[ext_resource type="TileSet" uid="uid://br65u3fvixncs" path="res://resources/tilesets/world.tres" id="1_d8ihg"]
+[ext_resource type="TileSet" uid="uid://dhv7jfrm0ct0k" path="res://resources/tilesets/world.tres" id="1_d8ihg"]
 [ext_resource type="Script" uid="uid://2bjm3lvk32lw" path="res://scenes/Nivel1/nivel_1.gd" id="1_ocf45"]
 [ext_resource type="PackedScene" uid="uid://b6afcx1yc8jpf" path="res://GUI/HUD/gui.tscn" id="2_1488l"]
 [ext_resource type="PackedScene" uid="uid://b3sky51l2wo47" path="res://entities/player/player.tscn" id="2_pb1nm"]
 [ext_resource type="PackedScene" uid="uid://b4kqwj3d4yw2l" path="res://scenes/Prueba Daño/area_2d.tscn" id="4_1488l"]
 [ext_resource type="PackedScene" uid="uid://ye14ih3dg5qb" path="res://entities/NPCs/types_npcs/npc_duglas/npc_duglas.tscn" id="6_62wm5"]
-[ext_resource type="PackedScene" uid="uid://b3s6kufs1r64a" path="res://entities/NPCs/types_npcs/npc_gaby/gaby_dialogue.tscn" id="6_rbuju"]
+[ext_resource type="PackedScene" uid="uid://cu1l1t7h87h82" path="res://entities/NPCs/types_npcs/npc_florentino/npc_florentino.tscn" id="7_rbuju"]
 [ext_resource type="PackedScene" uid="uid://c07ktuvcenoao" path="res://entities/NPCs/types_npcs/npc_cristina/npc_cristina.tscn" id="8_rrvuq"]
+[ext_resource type="PackedScene" uid="uid://53agtt78p2vq" path="res://entities/NPCs/types_npcs/npc_leonardo/npc_leonardo.tscn" id="9_arv6a"]
+[ext_resource type="PackedScene" uid="uid://ddq81qftsfsn7" path="res://entities/NPCs/types_npcs/npc_juan/npc_juan.tscn" id="10_r7bbt"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_ocf45")
@@ -32,12 +34,16 @@ position = Vector2(40, -61)
 [node name="Player" parent="." instance=ExtResource("2_pb1nm")]
 position = Vector2(-42, 7)
 
-[node name="GabyNPCs" parent="." instance=ExtResource("6_rbuju")]
-position = Vector2(-145, -3)
+[node name="FlorentinoNPC" parent="." instance=ExtResource("7_rbuju")]
+position = Vector2(110, -6)
+
+[node name="CristinaNPC" parent="." instance=ExtResource("8_rrvuq")]
 
 [node name="DuglasNPC" parent="." instance=ExtResource("6_62wm5")]
-position = Vector2(111, 35)
-collision_layer = 1
+position = Vector2(77, -2)
 
-[node name="NPC_Base" parent="." instance=ExtResource("8_rrvuq")]
-position = Vector2(136, -71)
+[node name="LeonardoNPC" parent="." instance=ExtResource("9_arv6a")]
+position = Vector2(51, -2)
+
+[node name="JuanNPC" parent="." instance=ExtResource("10_r7bbt")]
+position = Vector2(27, -1)

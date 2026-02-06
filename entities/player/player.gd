@@ -3,6 +3,11 @@ extends CharacterBody2D
 @onready var health_component = $HealthComponent
 @onready var weapon_holder = $Weapon 
 @onready var sprite_animation : AnimatedSprite2D = $AnimatedSprite2D
+@onready var camera: Camera2D = $Camera2D
+
+var zoom_normal: Vector2 = Vector2(2.25, 2.25)
+var zoom_dialogo: Vector2 = Vector2(3.5, 3.5)
+var tiempo_zoom: float = 1
 
 var _max_speed : float = 150.00
 var _acceleration: float = 1000.00
@@ -15,6 +20,9 @@ var _current_weapon: Weapon
 func _ready():
 	add_to_group("player")
 	health_component.health_depleted.connect(_on_death)
+
+	DialogueManager.dialogue_started.connect(_on_dialogue_started)
+	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 
 func _physics_process(delta: float) -> void:
 	if GameManager.is_dialog_active:
@@ -72,3 +80,17 @@ func _animation_player(shot_input: Vector2) -> void:
 func _on_death() -> void:
 	set_physics_process(false)
 	sprite_animation.play("idle")
+
+
+
+func _on_dialogue_started(_resource):
+		_smooth_zoom(zoom_dialogo)
+
+func _on_dialogue_ended(_resource):
+		_smooth_zoom(zoom_normal)
+
+func _smooth_zoom(target_zoom: Vector2):
+		var tween = create_tween()
+		tween.tween_property(camera, "zoom", target_zoom, tiempo_zoom)\
+				.set_trans(Tween.TRANS_QUART)\
+				.set_ease(Tween.EASE_OUT)

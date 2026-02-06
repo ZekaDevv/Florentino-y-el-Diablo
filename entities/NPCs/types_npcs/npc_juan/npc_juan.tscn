@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddq81qftsfsn7"]
+
+[ext_resource type="PackedScene" uid="uid://c2xixm41tkrhq" path="res://entities/NPCs/npc_base.tscn" id="1_hn8st"]
+[ext_resource type="SpriteFrames" uid="uid://hiquwp4vt58p" path="res://entities/NPCs/types_npcs/npc_juan/npc_juan.tres" id="2_epvc2"]
+[ext_resource type="Resource" uid="uid://hhub6erqxgvg" path="res://dialogues/NPCs/juan/juan.dialogue" id="2_m40qv"]
+
+[node name="JuanNPC" instance=ExtResource("1_hn8st")]
+npc_name = "Juan"
+dialogue_resource = ExtResource("2_m40qv")
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(0, -2)
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+scale = Vector2(1.0625, 1.125)
+sprite_frames = ExtResource("2_epvc2")
+animation = &"idle"

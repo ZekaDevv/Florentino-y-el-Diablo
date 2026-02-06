@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://hhub6erqxgvg"
+path="res://.godot/imported/juan.dialogue-e5c559f755c8bd3b0127dbef70725d0f.tres"
+
+[deps]
+
+source_file="res://dialogues/NPCs/juan/juan.dialogue"
+dest_files=["res://.godot/imported/juan.dialogue-e5c559f755c8bd3b0127dbef70725d0f.tres"]
+
+[params]
+
+defaults=true

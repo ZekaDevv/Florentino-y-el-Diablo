@@ -37,7 +37,7 @@ _bundled = {
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
-collision_mask = 9
+collision_mask = 15
 script = ExtResource("1_ycxet")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://b1r5xhpbx6b5c"
+path="res://.godot/imported/cristina.dialogue-2fb052d4ddc433b3315b6c49db8c8f9b.tres"
+
+[deps]
+
+source_file="res://dialogues/NPCs/cristina/cristina.dialogue"
+dest_files=["res://.godot/imported/cristina.dialogue-2fb052d4ddc433b3315b6c49db8c8f9b.tres"]
+
+[params]
+
+defaults=true

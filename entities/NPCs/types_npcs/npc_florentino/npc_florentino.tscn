@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cu1l1t7h87h82"]
+
+[ext_resource type="PackedScene" uid="uid://c2xixm41tkrhq" path="res://entities/NPCs/npc_base.tscn" id="1_axa1f"]
+[ext_resource type="Resource" uid="uid://dnko34n6447vu" path="res://dialogues/NPCs/florentino/florentino.dialogue" id="2_nd50e"]
+[ext_resource type="SpriteFrames" uid="uid://d3rrvusxsq430" path="res://entities/NPCs/types_npcs/npc_florentino/npc_florentino.tres" id="2_th6wx"]
+
+[node name="FlorentinoNPC" instance=ExtResource("1_axa1f")]
+position = Vector2(141, 16)
+npc_name = "Florentino"
+dialogue_resource = ExtResource("2_nd50e")
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(0, -1)
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+scale = Vector2(1.1875, 1.25)
+sprite_frames = ExtResource("2_th6wx")
+animation = &"idle"
+frame_progress = 0.112894155

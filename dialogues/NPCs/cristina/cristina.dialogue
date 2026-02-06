@@ -1,0 +1,45 @@
+~ start
+
+Cristina: ¡Epa, {{GameManager.name_player}}! Acércate, mijo, que el budare está en su punto.
+% Cristina: ¿Cómo está ese abuelo tuyo? Con cuidado me respondes, que las paredes aquí tienen oídos.
+% Cristina: Mira que te ves flaquito, muchacho. Seguro en esa casa no están entrando ni las moscas con tanto chisme.
+
+Cristina: [wave]¡Aprovecha![/wave] Tengo de carne mechada y de queso. ¿Qué te trae por el mercado?
+~ opciones
+Cristina: ¿Qué buscas, {{GameManager.name_player}}? ¿Quieres hablar o me vas a comprar empanadas?
+
+- ¿Está Leonardo por aquí? (Su hijo)
+	Cristina: Ese muchacho salió temprano a buscar leña.
+	Cristina: Me dijo que te buscara si te veía. Él no cree en esos cuentos de "mal agüero" que dice la gente.
+	Cristina: Son buenos amigos, y eso a mí me da paz... aunque a su padre le suba la tensión.
+	=> opciones
+
+- Mi abuelo no es el culpable de lo que le pasa al ganado.
+	Cristina: [speed=0.5](Baja la voz y mira a los lados)[/speed] Yo lo sé, mijo. Yo conocí a Florentino cuando sus versos daban vida y no miedo.
+	Cristina: Pero Duglas, mi marido... está terco. Perdimos tres novillos esta semana y él necesita a alguien a quien culpar para no llorar de la rabia.
+	Cristina: Dile a tu abuelo que rece... pero que lo haga bajito.
+	=> opciones
+
+- Dame una empanada de carne (10 de Bolívares)
+	if GameManager.gold >= 10
+		set GameManager.gold -= 10 # Mutación: Resta dinero
+		Cristina: Aquí tienes, mijo. Cuidado que quema más que el sol de mediodía.
+		{{GameManager.name_player}}: Gracias, Cristina. Está buenísima.
+	else
+		Cristina: Ay, mijo... las ganas sobran pero el bolívar falta. Vuelve cuando tengas con qué pagar.
+	=> opciones
+
+- ¿Por qué te da miedo hablar de mi abuelo?
+	Cristina: No es miedo a él, {{GameManager.name_player}}... es miedo a la sombra que lo sigue.
+	Cristina: El pueblo está "trancao", la tierra ya no da como antes. La gente necesita un culpable y tu abuelo se puso el blanco solito cuando retó a quien no debía.
+	=> opciones
+
+- Tengo que seguir mi camino.
+	=> despedida
+
+~ despedida
+% Cristina: ¡Con cuidado! Y no le digas a Duglas que estuvimos hablando, ¿oíste?
+% Cristina: Dale un saludo a Leonardo si lo ves por el río.
+% Cristina: ¡Que Dios te cuide de los malos encuentros, muchacho!
+
+=> END

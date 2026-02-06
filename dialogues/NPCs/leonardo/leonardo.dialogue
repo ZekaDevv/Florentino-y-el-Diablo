@@ -1,0 +1,42 @@
+~ start
+
+# Tres saludos aleatorios de Leonardo
+% Leonardo: [speed=0.6](Susurrando)[/speed] ¡Shhh! {{GameManager.name_player}}, por aquí... que nadie nos vea.
+% Leonardo: [speed=0.6](Susurrando)[/speed] ¡Ey! Menos mal que viniste. Mi viejo está rondando la plaza y anda de un humor de perros.
+% Leonardo: [speed=0.6](Susurrando)[/speed] ¡Pst! Acércate rápido, hermano. Mi mamá me dio permiso de salir solo un ratito.
+
+~ opciones
+Leonardo: Habla bajito, que el viento en este pueblo vuela muy rápido.
+
+- Leo. Yo también te voy a apoyar en todo. (Apoyar a tu amigo)
+	{{GameManager.name_player}}: No creas que tú eres el único que ayuda. Yo también estoy pendiente de ti.
+	{{GameManager.name_player}}: Cuando sea un gran coplero y limpie el nombre de mi abuelo, tú estarás ahí conmigo.
+	Leonardo: Gracias, hermano. De verdad me hacía falta escuchar eso.
+	Leonardo: Juntos vamos a demostrarle a mi papá y a todo el pueblo que las cosas pueden ser distintas.
+	=> opciones
+
+- Tú papá me echó a patadas de la cerca.
+	Leonardo: Lo sé... te vi desde la ventana. [speed=0.5]Por favor, no trates de hablar más con él.[/speed]
+	Leonardo: Él no entiende de razones ahorita. Dice que tu abuelo es la sombra del pueblo.
+	=> opciones
+
+- Algún día tendremos nuestra propia finca, ¿verdad?
+	Leonardo: [wave]¡Seguro que sí![/wave] Una finca grande, donde las vacas no se mueran y donde se escuche música.
+	Leonardo: Nadie nos va a decir con quién hablar ni a quién odiar.
+	=> opciones
+
+- Voy a limpiar el nombre de mi abuelo, Leonardo.
+	Leonardo: Yo te creo, {{GameManager.name_player}}. Sé que Florentino es un hombre bueno.
+	Leonardo: Redime su nombre, hermano. Haz que este pueblo vuelva a cantar.
+	=> opciones
+
+- Me voy antes de que nos descubran.
+	=> despedida
+
+~ despedida
+# Tres despedidas aleatorias
+% Leonardo: ¡Cuídate mucho! Nos vemos mañana en el mismo sitio.
+% Leonardo: Si necesitas algo, dile a mi mamá, ella te ayudará a escondidas.
+% Leonardo: ¡No dejes de ensayar esas coplas, que tú vas a ser el mejor!
+
+=> END
