@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bifle5qxdda0c"]
 
 [ext_resource type="Script" uid="uid://blqjmn1awtayw" path="res://entities/bullets/bullet_base.gd" id="1_1ausg"]
-[ext_resource type="Texture2D" uid="uid://d3itoi8sor0r7" path="res://assets/bullets/shot_1.png" id="2_1ausg"]
+[ext_resource type="SpriteFrames" uid="uid://cbx05rfo76gli" path="res://entities/bullets/bullet_base.tres" id="3_0fp35"]
 [ext_resource type="PackedScene" uid="uid://dyrg1f7nhsp37" path="res://components/hitbox/hitbox_types/hitbox_component_bullet.tscn" id="3_kwtpj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kwtpj"]
@@ -15,7 +15,12 @@ speed = 200
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_kwtpj")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_1ausg")
-
 [node name="HitboxComponentBullet" parent="." instance=ExtResource("3_kwtpj")]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("3_0fp35")
+animation = &"explodes"
+frame = 13
+frame_progress = 1.0
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
