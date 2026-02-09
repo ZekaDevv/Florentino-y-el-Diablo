@@ -5,10 +5,9 @@
 
 [node name="BulletShort" instance=ExtResource("1_l662f")]
 damage = 0.5
-speed = 150
-life_time = 0.75
+speed = 300
+life_time = 0.5
 
 [node name="AnimatedSprite2D" parent="." index="2"]
 scale = Vector2(1.3333334, 1.3333334)
 sprite_frames = ExtResource("2_pec6a")
-animation = &"explode"

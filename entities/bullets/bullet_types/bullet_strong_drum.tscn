@@ -4,8 +4,8 @@
 [ext_resource type="SpriteFrames" uid="uid://cbx05rfo76gli" path="res://entities/bullets/bullet_animation/bullet_strong_drum.tres" id="2_vhe2e"]
 
 [node name="BulletStrongDurn" instance=ExtResource("1_jrq5f")]
-damage = 1.5
-life_time = 0.5
+damage = 1.0
+life_time = 0.4
 
 [node name="AnimatedSprite2D" parent="." index="2"]
 sprite_frames = ExtResource("2_vhe2e")

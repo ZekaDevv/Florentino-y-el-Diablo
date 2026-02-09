@@ -6,5 +6,6 @@
 [node name="Harp" instance=ExtResource("1_2hcw8")]
 shoot_pattern = 4
 scene_bullet = ExtResource("2_23pvm")
+cooldown = 0.5
 bullet_count = 11
 spawn_margin = 15.0

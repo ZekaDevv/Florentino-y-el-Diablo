@@ -4,7 +4,7 @@ signal health_changed(current: int)
 signal player_died
 
 
-var name_player: String = "Arturo"
+var name_player: String = "Florentino"
 var max_health: int
 var current_health: int
 var gold: int = 0

@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=16 format=3 uid="uid://cxyhs0ix2j3hl"]
+[gd_resource type="SpriteFrames" load_steps=17 format=3 uid="uid://cxyhs0ix2j3hl"]
 
 [ext_resource type="Texture2D" uid="uid://cr6r07fgd3yy1" path="res://assets/bullets/shot_16th.png" id="1_rgw0h"]
 
@@ -58,6 +58,10 @@ region = Rect2(192, 0, 16, 12)
 atlas = ExtResource("1_rgw0h")
 region = Rect2(208, 0, 16, 12)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_rgw0h"]
+atlas = ExtResource("1_rgw0h")
+region = Rect2(0, 0, 16, 12)
+
 [resource]
 animations = [{
 "frames": [{
@@ -106,4 +110,12 @@ animations = [{
 "loop": false,
 "name": &"explodes",
 "speed": 25.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rgw0h")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
 }]

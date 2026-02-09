@@ -4,7 +4,9 @@
 [ext_resource type="SpriteFrames" uid="uid://cxyhs0ix2j3hl" path="res://entities/bullets/bullet_animation/bullet_weak.tres" id="2_e0v5j"]
 
 [node name="BulletWeak" instance=ExtResource("1_hpx0a")]
+damage = 0.5
 speed = 300
+life_time = 0.5
 
 [node name="AnimatedSprite2D" parent="." index="2"]
 sprite_frames = ExtResource("2_e0v5j")

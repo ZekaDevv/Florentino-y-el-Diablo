@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cvulcqxsdufdl"]
 
 [ext_resource type="Script" uid="uid://hk22jdcatcbm" path="res://GUI/inventory/inventory_slot.gd" id="1_ul7rj"]
-[ext_resource type="Texture2D" uid="uid://c0jpkv2mackfc" path="res://assets/icons/tile_0032.png" id="2_fvspr"]
+[ext_resource type="Texture2D" uid="uid://07inlt6wi1tv" path="res://assets/icons/tile_0008.png" id="2_ul7rj"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_itpqw"]
 
@@ -25,7 +25,7 @@ offset_left = -1.0
 offset_top = 1.0
 offset_right = 59.0
 offset_bottom = 56.0
-texture = ExtResource("2_fvspr")
+texture = ExtResource("2_ul7rj")
 expand_mode = 1
 
 [node name="Icon" type="TextureRect" parent="."]

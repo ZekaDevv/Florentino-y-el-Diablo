@@ -5,12 +5,14 @@
 [ext_resource type="PackedScene" uid="uid://dyrg1f7nhsp37" path="res://components/hitbox/hitbox_types/hitbox_component_bullet.tscn" id="3_kwtpj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kwtpj"]
-size = Vector2(16, 16)
+size = Vector2(18, 16)
 
 [node name="BulletBase" type="Area2D"]
 collision_layer = 32
 script = ExtResource("1_1ausg")
+damage = 1.5
 speed = 200
+life_time = 1.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_kwtpj")

@@ -11,9 +11,9 @@ heart_gui_scene = ExtResource("2_x71ey")
 
 [node name="MarginContainer" parent="." instance=ExtResource("3_fl6jf")]
 offset_right = 240.0
-offset_bottom = 99.0
+offset_bottom = 110.0
 
-[node name="inventory_uI" parent="." instance=ExtResource("2_mpjt6")]
+[node name="inventory_ui" parent="." instance=ExtResource("2_mpjt6")]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -28,7 +28,12 @@ grow_vertical = 0
 size_flags_vertical = 4
 
 [node name="HeartContainer" type="HBoxContainer" parent="."]
-offset_left = 16.0
-offset_top = 105.0
-offset_right = 56.0
-offset_bottom = 145.0
+anchors_preset = -1
+anchor_left = 0.078
+anchor_top = 0.086
+anchor_right = 0.078
+anchor_bottom = 0.086
+offset_left = 20.451996
+offset_top = -0.04800415
+offset_right = 46.451996
+offset_bottom = 27.951996

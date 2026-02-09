@@ -6,6 +6,7 @@
 [node name="Guitar" instance=ExtResource("1_pcwfe")]
 shoot_pattern = 1
 scene_bullet = ExtResource("2_6vuop")
+cooldown = 0.5
 bullet_count = 6.0
 spawn_margin = 15.0
-arc_spread = 70.0
+arc_spread = 100.0

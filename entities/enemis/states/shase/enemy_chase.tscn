@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://esgunvk8e657"]
+
+[ext_resource type="Script" uid="uid://cqk1ai3pxx8dp" path="res://entities/enemis/states/shase/enemy_chase.gd" id="1_lydfa"]
+
+[node name="EnemyChase" type="Node"]
+script = ExtResource("1_lydfa")
