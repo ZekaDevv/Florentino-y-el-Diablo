@@ -51,7 +51,14 @@ size_flags_horizontal = 3
 [node name="title" type="Label" parent="MarginContainer/HBoxContainer/LeftColumn"]
 layout_mode = 2
 size_flags_horizontal = 0
-text = "Florentino y el Diablo"
+text = "Coplas Oscuras"
+
+[node name="SubTitle" type="Label" parent="MarginContainer/HBoxContainer/LeftColumn"]
+layout_mode = 2
+theme_override_constants/outline_size = 0
+theme_override_constants/shadow_outline_size = 0
+theme_override_font_sizes/font_size = 35
+text = "Florentino y el Diablo  "
 
 [node name="Spacer" type="Control" parent="MarginContainer/HBoxContainer/LeftColumn"]
 custom_minimum_size = Vector2(0, 85)

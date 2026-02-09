@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bruq7qamuyud7"]
+
+[ext_resource type="PackedScene" uid="uid://bifle5qxdda0c" path="res://entities/bullets/bullet_base.tscn" id="1_qtapu"]
+[ext_resource type="SpriteFrames" uid="uid://nbo2ts53uw6s" path="res://entities/bullets/bullet_animation/bullet_white.tres" id="2_xvhki"]
+
+[node name="BulletWhite" instance=ExtResource("1_qtapu")]
+
+[node name="AnimatedSprite2D" parent="." index="2"]
+scale = Vector2(1.6666665, 1.3333334)
+sprite_frames = ExtResource("2_xvhki")

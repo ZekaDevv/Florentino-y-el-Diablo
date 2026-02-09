@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponData" load_steps=3 format=3 uid="uid://cmitb67id0521"]
+
+[ext_resource type="Script" uid="uid://ci6d6cumf6j1d" path="res://resources/weapon_data/weapon_data.gd" id="1_flim0"]
+[ext_resource type="PackedScene" uid="uid://d3osccu7e4pcm" path="res://entities/weapons/weapon_types/guitar.tscn" id="2_beo10"]
+
+[resource]
+script = ExtResource("1_flim0")
+name_weapon = "Guitar"
+weapon_scene = ExtResource("2_beo10")
+metadata/_custom_type_script = "uid://ci6d6cumf6j1d"

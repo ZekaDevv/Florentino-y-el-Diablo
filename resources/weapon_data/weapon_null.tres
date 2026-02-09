@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponData" load_steps=3 format=3 uid="uid://c5wta3jwsm836"]
+
+[ext_resource type="Script" uid="uid://ci6d6cumf6j1d" path="res://resources/weapon_data/weapon_data.gd" id="1_o16eu"]
+[ext_resource type="PackedScene" uid="uid://cqkui8b761lwd" path="res://entities/weapons/weapon.tscn" id="2_ymcap"]
+
+[resource]
+script = ExtResource("1_o16eu")
+name_weapon = "Null"
+weapon_scene = ExtResource("2_ymcap")
+metadata/_custom_type_script = "uid://ci6d6cumf6j1d"

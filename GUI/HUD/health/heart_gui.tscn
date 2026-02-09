@@ -7,12 +7,12 @@
 
 [node name="HeartGUI" type="Panel"]
 custom_minimum_size = Vector2(20, 18)
-offset_right = 20.0
-offset_bottom = 18.0
+offset_right = 45.0
+offset_bottom = 33.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_mw7vr")
 script = ExtResource("1_llsgp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(9.75, 9.25)
-scale = Vector2(2.0555556, 1.9444444)
+position = Vector2(18, 16)
+scale = Vector2(4.0277777, 3.5277777)
 texture = ExtResource("2_t6my1")

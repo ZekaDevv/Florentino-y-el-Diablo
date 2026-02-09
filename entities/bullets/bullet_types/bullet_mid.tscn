@@ -1,8 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://cmdnahma5wmbw"]
+[gd_scene load_steps=3 format=3 uid="uid://cmdnahma5wmbw"]
 
 [ext_resource type="PackedScene" uid="uid://bifle5qxdda0c" path="res://entities/bullets/bullet_base.tscn" id="1_l662f"]
+[ext_resource type="SpriteFrames" uid="uid://dolqrgcmpde8h" path="res://entities/bullets/bullet_animation/bullet_mid.tres" id="2_pec6a"]
 
 [node name="BulletShort" instance=ExtResource("1_l662f")]
 damage = 0.5
 speed = 150
 life_time = 0.75
+
+[node name="AnimatedSprite2D" parent="." index="2"]
+scale = Vector2(1.3333334, 1.3333334)
+sprite_frames = ExtResource("2_pec6a")
+animation = &"explode"

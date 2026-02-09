@@ -1,12 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://c6w1ni4spwjd5"]
+[gd_scene load_steps=3 format=3 uid="uid://c6w1ni4spwjd5"]
 
 [ext_resource type="PackedScene" uid="uid://cqkui8b761lwd" path="res://entities/weapons/weapon.tscn" id="1_6lv5i"]
+[ext_resource type="PackedScene" uid="uid://bruq7qamuyud7" path="res://entities/bullets/bullet_types/bullet_base_white.tscn" id="2_nwexd"]
 
 [node name="Maracas" instance=ExtResource("1_6lv5i")]
 shoot_pattern = 3
+scene_bullet = ExtResource("2_nwexd")
 cooldown = 0.5
 inertia_factor = 0.2
 bullet_count = 2.0
 burst_delay = 0.15
 spawn_margin = 15.0
-arc_spread = 10.0
+arc_spread = 20.0

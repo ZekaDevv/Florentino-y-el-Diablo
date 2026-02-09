@@ -1,8 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://bcjprw43abw1n"]
+[gd_scene load_steps=3 format=3 uid="uid://bcjprw43abw1n"]
 
 [ext_resource type="PackedScene" uid="uid://bifle5qxdda0c" path="res://entities/bullets/bullet_base.tscn" id="1_te2j6"]
+[ext_resource type="SpriteFrames" uid="uid://c84clmt4xihll" path="res://entities/bullets/bullet_animation/bullet_short.tres" id="2_y4qm0"]
 
-[node name="BulletStrong" instance=ExtResource("1_te2j6")]
+[node name="BulletShort" instance=ExtResource("1_te2j6")]
 damage = 3.0
 speed = 300
 life_time = 0.3
+
+[node name="AnimatedSprite2D" parent="." index="2"]
+scale = Vector2(1.3333334, 1.3333334)
+sprite_frames = ExtResource("2_y4qm0")
+frame_progress = 0.9257064

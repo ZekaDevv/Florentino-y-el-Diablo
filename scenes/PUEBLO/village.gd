@@ -2,13 +2,11 @@ extends Node2D
 
 @onready var player = $Player
 @onready var tilemap = $Floor
-
+@onready var heart_container = $HUD
 
 func _ready() -> void:
 	var map_react = tilemap.get_used_rect()
 	var tile_size = tilemap.tile_set.tile_size
-	
-	var world_size_in_pixel = map_react.size * tile_size
 	
 	var camera = player.get_node("Camera2D")
 	

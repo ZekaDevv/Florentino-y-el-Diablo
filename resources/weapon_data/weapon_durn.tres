@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponData" load_steps=3 format=3 uid="uid://jtiq42lcxkbp"]
+
+[ext_resource type="Script" uid="uid://ci6d6cumf6j1d" path="res://resources/weapon_data/weapon_data.gd" id="1_ev60y"]
+[ext_resource type="PackedScene" uid="uid://cgxujxt0vo28a" path="res://entities/weapons/weapon_types/drum.tscn" id="2_rtk6g"]
+
+[resource]
+script = ExtResource("1_ev60y")
+name_weapon = "Drum"
+weapon_scene = ExtResource("2_rtk6g")
+metadata/_custom_type_script = "uid://ci6d6cumf6j1d"

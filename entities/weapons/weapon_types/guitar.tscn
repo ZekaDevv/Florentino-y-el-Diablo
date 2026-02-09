@@ -1,9 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://d3osccu7e4pcm"]
 
 [ext_resource type="PackedScene" uid="uid://cqkui8b761lwd" path="res://entities/weapons/weapon.tscn" id="1_pcwfe"]
-[ext_resource type="PackedScene" uid="uid://cmdnahma5wmbw" path="res://entities/bullets/bullet_types/bullet_mid.tscn" id="2_6vuop"]
+[ext_resource type="PackedScene" uid="uid://bcjprw43abw1n" path="res://entities/bullets/bullet_types/bullet_short.tscn" id="2_6vuop"]
 
 [node name="Guitar" instance=ExtResource("1_pcwfe")]
+shoot_pattern = 1
 scene_bullet = ExtResource("2_6vuop")
 bullet_count = 6.0
 spawn_margin = 15.0

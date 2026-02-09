@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://mq5ix0asbmrb"]
+[gd_scene load_steps=3 format=3 uid="uid://mq5ix0asbmrb"]
 
 [ext_resource type="PackedScene" uid="uid://bifle5qxdda0c" path="res://entities/bullets/bullet_base.tscn" id="1_hpx0a"]
+[ext_resource type="SpriteFrames" uid="uid://cxyhs0ix2j3hl" path="res://entities/bullets/bullet_animation/bullet_weak.tres" id="2_e0v5j"]
 
 [node name="BulletWeak" instance=ExtResource("1_hpx0a")]
 speed = 300
+
+[node name="AnimatedSprite2D" parent="." index="2"]
+sprite_frames = ExtResource("2_e0v5j")

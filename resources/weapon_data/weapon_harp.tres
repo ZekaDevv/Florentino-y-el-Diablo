@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponData" load_steps=3 format=3 uid="uid://quftlwvxv3cd"]
+
+[ext_resource type="Script" uid="uid://ci6d6cumf6j1d" path="res://resources/weapon_data/weapon_data.gd" id="1_ovaw5"]
+[ext_resource type="PackedScene" uid="uid://cm4iqlnpjscd6" path="res://entities/weapons/weapon_types/harp.tscn" id="2_4rqb0"]
+
+[resource]
+script = ExtResource("1_ovaw5")
+name_weapon = "Harp"
+weapon_scene = ExtResource("2_4rqb0")
+metadata/_custom_type_script = "uid://ci6d6cumf6j1d"

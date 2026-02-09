@@ -1,33 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://cqkui8b761lwd"]
+[gd_scene load_steps=3 format=3 uid="uid://cqkui8b761lwd"]
 
 [ext_resource type="Script" uid="uid://b15ft1ligkt1r" path="res://entities/weapons/weapon.gd" id="1_mky6i"]
-[ext_resource type="Script" uid="uid://blqjmn1awtayw" path="res://entities/bullets/bullet_base.gd" id="2_l8a67"]
-[ext_resource type="Texture2D" uid="uid://d3itoi8sor0r7" path="res://assets/bullets/shot_1.png" id="3_2n5qc"]
-[ext_resource type="Script" uid="uid://b7ew7k5b4k7n" path="res://components/hitbox/hitbox_component.gd" id="4_8ul80"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2kyv7"]
-size = Vector2(12, 12)
-
-[sub_resource type="PackedScene" id="PackedScene_di2bd"]
-_bundled = {
-"conn_count": 0,
-"conns": PackedInt32Array(),
-"editable_instances": [],
-"names": PackedStringArray("BulletBase", "script", "speed", "Area2D", "Sprite2D", "texture", "Hitbox", "shape", "CollisionShape2D"),
-"node_count": 3,
-"node_paths": [],
-"nodes": PackedInt32Array(-1, -1, 3, 0, -1, 2, 1, 0, 2, 1, 0, 0, 0, 4, 4, -1, 1, 5, 2, 0, 0, 0, 8, 6, -1, 2, 7, 3, 1, 4, 0),
-"variants": [ExtResource("2_l8a67"), 200, ExtResource("3_2n5qc"), SubResource("RectangleShape2D_2kyv7"), ExtResource("4_8ul80")],
-"version": 3
-}
+[ext_resource type="PackedScene" uid="uid://bifle5qxdda0c" path="res://entities/bullets/bullet_base.tscn" id="2_mky6i"]
 
 [node name="Base" type="Node2D"]
 script = ExtResource("1_mky6i")
-shoot_pattern = 0
-scene_bullet = SubResource("PackedScene_di2bd")
-burst_delay = 0.0
+scene_bullet = ExtResource("2_mky6i")
 spawn_margin = 0.0
 arc_spread = 0.0
-double_spawn_margin = 0.0
 
 [node name="Muzzle" type="Marker2D" parent="."]

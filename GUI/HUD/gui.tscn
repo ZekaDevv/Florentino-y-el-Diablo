@@ -1,10 +1,34 @@
-[gd_scene load_steps=3 format=3 uid="uid://b6afcx1yc8jpf"]
+[gd_scene load_steps=5 format=3 uid="uid://b6afcx1yc8jpf"]
 
 [ext_resource type="Script" uid="uid://dpj0dnpka5ps3" path="res://GUI/HUD/gui.gd" id="1_egdk1"]
+[ext_resource type="PackedScene" uid="uid://do7y6gtqj1rs2" path="res://GUI/inventory/inventory_ui.tscn" id="2_mpjt6"]
 [ext_resource type="PackedScene" uid="uid://dwvblpd44jfw0" path="res://GUI/HUD/health/heart_gui.tscn" id="2_x71ey"]
+[ext_resource type="PackedScene" uid="uid://hewps2tvqo2q" path="res://GUI/Info/info_player.tscn" id="3_fl6jf"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_egdk1")
 heart_gui_scene = ExtResource("2_x71ey")
 
+[node name="MarginContainer" parent="." instance=ExtResource("3_fl6jf")]
+offset_right = 240.0
+offset_bottom = 99.0
+
+[node name="inventory_uI" parent="." instance=ExtResource("2_mpjt6")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -232.5
+offset_top = -71.0
+offset_right = 232.5
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 4
+
 [node name="HeartContainer" type="HBoxContainer" parent="."]
+offset_left = 16.0
+offset_top = 105.0
+offset_right = 56.0
+offset_bottom = 145.0

@@ -19,7 +19,7 @@ var _current_weapon: Weapon
 
 func _ready():
 	add_to_group("player")
-	health_component.health_depleted.connect(_on_death)
+	GameManager.player_died.connect(_on_death)
 
 	DialogueManager.dialogue_started.connect(_on_dialogue_started)
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)

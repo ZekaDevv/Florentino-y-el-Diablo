@@ -1,44 +1,24 @@
-[gd_scene load_steps=18 format=3 uid="uid://b3sky51l2wo47"]
+[gd_scene load_steps=8 format=3 uid="uid://b3sky51l2wo47"]
 
 [ext_resource type="SpriteFrames" uid="uid://12bc4iysidab" path="res://entities/player/player.tres" id="1_pwxuj"]
 [ext_resource type="Script" uid="uid://dffq5hgf2v4tf" path="res://entities/player/player.gd" id="1_ycxet"]
-[ext_resource type="PackedScene" uid="uid://c6w1ni4spwjd5" path="res://entities/weapons/weapon_types/maracas.tscn" id="3_afbqv"]
-[ext_resource type="PackedScene" uid="uid://cqkui8b761lwd" path="res://entities/weapons/weapon.tscn" id="3_fkugw"]
-[ext_resource type="PackedScene" uid="uid://cm4iqlnpjscd6" path="res://entities/weapons/weapon_types/harp.tscn" id="3_j3ovn"]
-[ext_resource type="PackedScene" uid="uid://d3osccu7e4pcm" path="res://entities/weapons/weapon_types/guitar.tscn" id="3_qiwj3"]
-[ext_resource type="PackedScene" uid="uid://bfykcfykr583g" path="res://entities/weapons/weapon_types/cuatro.tscn" id="3_wvtmh"]
-[ext_resource type="PackedScene" uid="uid://mq5ix0asbmrb" path="res://entities/bullets/bullet_types/bullet_weak.tscn" id="4_afbqv"]
-[ext_resource type="PackedScene" uid="uid://cgxujxt0vo28a" path="res://entities/weapons/weapon_types/drum.tscn" id="4_fkugw"]
+[ext_resource type="Script" uid="uid://baqq1p1jgfdy3" path="res://components/inventory/inventory_component.gd" id="3_bectd"]
 [ext_resource type="PackedScene" uid="uid://cf26lt1a2neto" path="res://components/health/health_component.tscn" id="4_gd5fs"]
-[ext_resource type="Script" uid="uid://blqjmn1awtayw" path="res://entities/bullets/bullet_base.gd" id="5_bectd"]
-[ext_resource type="Texture2D" uid="uid://d3itoi8sor0r7" path="res://assets/bullets/shot_1.png" id="6_wvtmh"]
-[ext_resource type="Script" uid="uid://b7ew7k5b4k7n" path="res://components/hitbox/hitbox_component.gd" id="7_7thud"]
+[ext_resource type="PackedScene" uid="uid://diir3s5wfvf3p" path="res://components/inventory/inventory_component.tscn" id="6_7thud"]
 [ext_resource type="PackedScene" uid="uid://cvrxfsw1ouli" path="res://components/hurtbox/hurtbox_types/hurtbox_component_player.tscn" id="14_afbqv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_41hvs"]
 size = Vector2(17, 24)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2kyv7"]
-size = Vector2(12, 12)
-
-[sub_resource type="PackedScene" id="PackedScene_afbqv"]
-resource_local_to_scene = true
-_bundled = {
-"conn_count": 0,
-"conns": PackedInt32Array(),
-"editable_instances": [],
-"names": PackedStringArray("BulletBase", "script", "speed", "Area2D", "Sprite2D", "texture", "Hitbox", "shape", "CollisionShape2D"),
-"node_count": 3,
-"node_paths": [],
-"nodes": PackedInt32Array(-1, -1, 3, 0, -1, 2, 1, 0, 2, 1, 0, 0, 0, 4, 4, -1, 1, 5, 2, 0, 0, 0, 8, 6, -1, 2, 7, 3, 1, 4, 0),
-"variants": [ExtResource("5_bectd"), 200, ExtResource("6_wvtmh"), SubResource("RectangleShape2D_2kyv7"), ExtResource("7_7thud")],
-"version": 3
-}
-
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 15
 script = ExtResource("1_ycxet")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2.25, 2.25)
+limit_smoothed = true
+script = ExtResource("3_bectd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("1_pwxuj")
@@ -49,43 +29,13 @@ frame_progress = 0.52557564
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_41hvs")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2.25, 2.25)
-limit_smoothed = true
-
-[node name="Weapon" type="Node2D" parent="."]
-
-[node name="Maracas" parent="Weapon" instance=ExtResource("3_afbqv")]
-scene_bullet = ExtResource("4_afbqv")
-bullet_count = 2
-spawn_margin = 0.0
-arc_spread = 15.0
-
-[node name="Harp" parent="Weapon" instance=ExtResource("3_j3ovn")]
-visible = false
-shoot_pattern = 4
-scene_bullet = ExtResource("4_afbqv")
-cooldown = 0.35
-
-[node name="Cuatro" parent="Weapon" instance=ExtResource("3_wvtmh")]
-visible = false
-bullet_count = 1
-
-[node name="Guitar" parent="Weapon" instance=ExtResource("3_qiwj3")]
-visible = false
-shoot_pattern = 1
-cooldown = 0.5
-bullet_count = 1
-
-[node name="Drum" parent="Weapon" instance=ExtResource("4_fkugw")]
-visible = false
-shoot_pattern = 0
-bullet_count = 1
-
-[node name="Base" parent="Weapon" instance=ExtResource("3_fkugw")]
-visible = false
-scene_bullet = SubResource("PackedScene_afbqv")
-
 [node name="HealthComponent" parent="." instance=ExtResource("4_gd5fs")]
+is_player = true
+max_health = 5
 
 [node name="HurtboxComponentPlayer" parent="." instance=ExtResource("14_afbqv")]
+
+[node name="InventoryComponent" parent="." instance=ExtResource("6_7thud")]
+
+[node name="Weapon" type="Node2D" parent="."]
+position = Vector2(-1, 0)

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponData" load_steps=3 format=3 uid="uid://na60epsf5il5"]
+
+[ext_resource type="Script" uid="uid://ci6d6cumf6j1d" path="res://resources/weapon_data/weapon_data.gd" id="1_86uwp"]
+[ext_resource type="PackedScene" uid="uid://bfykcfykr583g" path="res://entities/weapons/weapon_types/cuatro.tscn" id="2_kwmfe"]
+
+[resource]
+script = ExtResource("1_86uwp")
+name_weapon = "Cuatro"
+weapon_scene = ExtResource("2_kwmfe")
+metadata/_custom_type_script = "uid://ci6d6cumf6j1d"
