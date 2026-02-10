@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dv4hsdwl3qnq4"
-path="res://.godot/imported/niño_sifrino.png-2477c0d21acb593b977282228e13147e.ctex"
+uid="uid://ic0at7r08ltn"
+path="res://.godot/imported/npc_idle_douglas.png-f507406f402b9bb9fbc82206a572b3df.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/npcs/niño_sifrino.png"
-dest_files=["res://.godot/imported/niño_sifrino.png-2477c0d21acb593b977282228e13147e.ctex"]
+source_file="res://assets/characters/npcs/npc_idle_douglas.png"
+dest_files=["res://.godot/imported/npc_idle_douglas.png-f507406f402b9bb9fbc82206a572b3df.ctex"]
 
 [params]
 

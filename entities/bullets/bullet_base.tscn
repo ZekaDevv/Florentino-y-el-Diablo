@@ -8,7 +8,7 @@
 size = Vector2(18, 16)
 
 [node name="BulletBase" type="Area2D"]
-collision_layer = 32
+collision_layer = 96
 script = ExtResource("1_1ausg")
 damage = 1.5
 speed = 200

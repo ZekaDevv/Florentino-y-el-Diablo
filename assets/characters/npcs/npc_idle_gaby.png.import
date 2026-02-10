@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dd5vvhl64us43"
-path="res://.godot/imported/florentino.png-2c5161bd271fbe4ab73078e63eebfe66.ctex"
+uid="uid://yjbpy7ronin"
+path="res://.godot/imported/npc_idle_gaby.png-b9a29933c3e19a9823e9cd064523c161.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/npcs/florentino.png"
-dest_files=["res://.godot/imported/florentino.png-2c5161bd271fbe4ab73078e63eebfe66.ctex"]
+source_file="res://assets/characters/npcs/npc_idle_gaby.png"
+dest_files=["res://.godot/imported/npc_idle_gaby.png-b9a29933c3e19a9823e9cd064523c161.ctex"]
 
 [params]
 

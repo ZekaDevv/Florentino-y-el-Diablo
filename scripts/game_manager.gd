@@ -5,8 +5,8 @@ signal player_died
 
 
 var name_player: String = "Florentino"
-var max_health: int
-var current_health: int
+var max_health: float
+var current_health: float
 var gold: int = 0
 
 signal inventory_updated(slot_index: int, item: WeaponData)
@@ -40,7 +40,7 @@ func _ready():
 	add_item(guitar)
 	add_item(harp)
 
-func take_damage(amount: int):
+func take_damage(amount: float):
 	current_health -= amount
 
 	if current_health <= 0:

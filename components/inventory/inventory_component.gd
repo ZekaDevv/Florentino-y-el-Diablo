@@ -5,6 +5,7 @@ class_name InventoryComponent
 @onready var weapon_holder = $"../Weapon"
 
 var can_switch_weapon: bool = true
+
 const SWITCH_COOLDOWN: float = 0.5
 
 func _ready():
@@ -17,6 +18,14 @@ func _unhandled_input(event) -> void:
 	if not can_switch_weapon:
 		return
 	
+	if event.is_action_pressed("weapon_next"):
+		switch_to_next_weapon()
+		return
+				
+	if event.is_action_pressed("weapon_prev"):
+		switch_to_prev_weapon()
+		return
+	
 	if event is InputEventKey and event.is_pressed():
 		
 		match event.keycode:
@@ -26,6 +35,7 @@ func _unhandled_input(event) -> void:
 			KEY_4: _attempt_switch_weapon(3)  
 			KEY_5: _attempt_switch_weapon(4)
 			KEY_6: _attempt_switch_weapon(5)
+	
 			
 func _on_active_slot_changed(new_index: int):
 	_update_weapon_visuals(new_index)
@@ -56,3 +66,16 @@ func _attempt_switch_weapon(index: int):
 		await get_tree().create_timer(SWITCH_COOLDOWN).timeout
 		
 		can_switch_weapon = true
+
+
+func switch_to_next_weapon():
+	var current = GameManager.active_slot_index
+	var next_index = (current + 1) % 6 
+		
+	_attempt_switch_weapon(next_index)
+
+func switch_to_prev_weapon():
+	var current = GameManager.active_slot_index
+	var prev_index = (current - 1 + 6) % 6
+		
+	_attempt_switch_weapon(prev_index)

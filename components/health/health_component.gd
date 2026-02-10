@@ -4,7 +4,7 @@ extends Node
 @export var max_health: int = 20
 var current_health: int
 
-var _local_health: int
+var _local_health: float
 
 signal health_changed(current: int)
 signal health_depleted
@@ -17,7 +17,7 @@ func _ready() -> void:
 	else:
 		_local_health = max_health
 
-func take_damage(amount: int):
+func take_damage(amount: float):
 	if is_player:
 		GameManager.take_damage(amount)
 		health_changed.emit(GameManager.current_health)

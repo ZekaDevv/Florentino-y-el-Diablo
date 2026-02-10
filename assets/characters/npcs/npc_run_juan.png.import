@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3fjjmeiu71x8"
-path="res://.godot/imported/gabysuki.png-81e259df3991d45b956f64454b3b6d76.ctex"
+uid="uid://2rcy5t6ncjui"
+path="res://.godot/imported/npc_run_juan.png-456c4a3d07e8dc8b276eb31ac45b629a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/npcs/gabysuki.png"
-dest_files=["res://.godot/imported/gabysuki.png-81e259df3991d45b956f64454b3b6d76.ctex"]
+source_file="res://assets/characters/npcs/npc_run_juan.png"
+dest_files=["res://.godot/imported/npc_run_juan.png-456c4a3d07e8dc8b276eb31ac45b629a.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cy5ssqv60che2"
-path="res://.godot/imported/señora_buchona.png-c48fbb6c94eca4e77fbc043b623d421d.ctex"
+uid="uid://dxu5dxbdcfwsg"
+path="res://.godot/imported/npc_idle_cristina.png-f334177d599e75faf0dc5ea916501755.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/npcs/señora_buchona.png"
-dest_files=["res://.godot/imported/señora_buchona.png-c48fbb6c94eca4e77fbc043b623d421d.ctex"]
+source_file="res://assets/characters/npcs/npc_idle_cristina.png"
+dest_files=["res://.godot/imported/npc_idle_cristina.png-f334177d599e75faf0dc5ea916501755.ctex"]
 
 [params]
 

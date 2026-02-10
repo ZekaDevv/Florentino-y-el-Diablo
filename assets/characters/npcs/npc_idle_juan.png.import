@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dijxj3mouqqte"
-path="res://.godot/imported/el_sugar_frame-Sheet.png-6e1c675d486eba7b850a21c288192dc5.ctex"
+uid="uid://c2xp03fdmuhim"
+path="res://.godot/imported/npc_idle_juan.png-00b0b8c5de9665e19587cb514eaa85c5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/npcs/el_sugar_frame-Sheet.png"
-dest_files=["res://.godot/imported/el_sugar_frame-Sheet.png-6e1c675d486eba7b850a21c288192dc5.ctex"]
+source_file="res://assets/characters/npcs/npc_idle_juan.png"
+dest_files=["res://.godot/imported/npc_idle_juan.png-00b0b8c5de9665e19587cb514eaa85c5.ctex"]
 
 [params]
 

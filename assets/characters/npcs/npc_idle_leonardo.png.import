@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bj7nf61xhcvdo"
-path="res://.godot/imported/niño_chambeador-Sheet.png-ddb4a9a4d4538edb3bb514d0d4cc003a.ctex"
+uid="uid://b386euado5ow7"
+path="res://.godot/imported/npc_idle_leonardo.png-7bb255f28006ca03499eb3cc9bf4b561.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/npcs/niño_chambeador-Sheet.png"
-dest_files=["res://.godot/imported/niño_chambeador-Sheet.png-ddb4a9a4d4538edb3bb514d0d4cc003a.ctex"]
+source_file="res://assets/characters/npcs/npc_idle_leonardo.png"
+dest_files=["res://.godot/imported/npc_idle_leonardo.png-7bb255f28006ca03499eb3cc9bf4b561.ctex"]
 
 [params]
 

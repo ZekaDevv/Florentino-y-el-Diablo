@@ -17,6 +17,8 @@ var _remember_shot_direction: bool = false
 
 var _current_weapon: Weapon
 
+var deadzone: float = 0.99
+
 func _ready():
 	add_to_group("player")
 	GameManager.player_died.connect(_on_death)
@@ -36,11 +38,11 @@ func _physics_process(delta: float) -> void:
 		_current_weapon = child
 
 	var _direction: Vector2 = Input.get_vector(
-		"left_movement", "right_movement", "up_movement", "down_movement"
+		"left_movement", "right_movement", "up_movement", "down_movement", deadzone
 		)
 		
 	var _shot_vector = Input.get_vector(
-		"left_shot", "right_shot", "up_shot", "down_shot"
+		"left_shot", "right_shot", "up_shot", "down_shot", deadzone
 		)
 
 	if _direction != Vector2.ZERO:
@@ -79,7 +81,7 @@ func _animation_player(shot_input: Vector2) -> void:
 
 func _on_death() -> void:
 	set_physics_process(false)
-	sprite_animation.play("idle")
+	sprite_animation.play("death")
 
 
 

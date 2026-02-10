@@ -7,6 +7,7 @@ size = Vector2(17, 24)
 
 [node name="HurtboxComponentPlayer" instance=ExtResource("1_jl35l")]
 collision_layer = 6
+collision_mask = 64
 
 [node name="CollisionShape2D" parent="." index="0"]
 light_mask = 2

@@ -1,45 +1,44 @@
 ~ start
 
 Cristina: ¡Epa, {{GameManager.name_player}}! Acércate, mijo, que el budare está en su punto.
-% Cristina: ¿Cómo está ese abuelo tuyo? Con cuidado me respondes, que las paredes aquí tienen oídos.
-% Cristina: Mira que te ves flaquito, muchacho. Seguro en esa casa no están entrando ni las moscas con tanto chisme.
+% Cristina: ¿Cómo está ese abuelo tuyo? pero cuidadito, que las paredes aquí tienen orejas.
+% Cristina: Mira que te ves flaquito, muchacho, come alguito.
 
 Cristina: [wave]¡Aprovecha![/wave] Tengo de carne mechada y de queso. ¿Qué te trae por el mercado?
 ~ opciones
 Cristina: ¿Qué buscas, {{GameManager.name_player}}? ¿Quieres hablar o me vas a comprar empanadas?
 
-- ¿Está Leonardo por aquí? (Su hijo)
-	Cristina: Ese muchacho salió temprano a buscar leña.
-	Cristina: Me dijo que te buscara si te veía. Él no cree en esos cuentos de "mal agüero" que dice la gente.
-	Cristina: Son buenos amigos, y eso a mí me da paz... aunque a su padre le suba la tensión.
+- ¿Está Leo por aquí? (Su hijo)
+	Cristina: Ese muchacho salió ahorita a buscar leña.
+	Cristina: Me dijo que lo buscaras si te veía. Él no cree en esos cuentos que le dicen.
+	Cristina: Eres buena junta, y eso a mí me tiene tranquila... aunque a su padre le suba la tensión.
 	=> opciones
 
 - Mi abuelo no es el culpable de lo que le pasa al ganado.
-	Cristina: [speed=0.5](Baja la voz y mira a los lados)[/speed] Yo lo sé, mijo. Yo conocí a Florentino cuando sus versos daban vida y no miedo.
-	Cristina: Pero Duglas, mi marido... está terco. Perdimos tres novillos esta semana y él necesita a alguien a quien culpar para no llorar de la rabia.
-	Cristina: Dile a tu abuelo que rece... pero que lo haga bajito.
+	Cristina: [speed=0.5](Baja la voz y mira a los lados)[/speed] Yo lo sé, mijo. Yo conocí a Florentino cuando sus coplas animaban a todos y no los espantaban.
+	Cristina: Pero Douglas, mi marido... todo terco. Perdimos tres novillas esta semana y él necesita a alguien a quien culpar para no llorar de la rabia.
 	=> opciones
 
-- Dame una empanada de carne (10 de Bolívares)
+- Dame una empanada de carne (10 Bolívares)
 	if GameManager.gold >= 10
 		set GameManager.gold -= 10 # Mutación: Resta dinero
-		Cristina: Aquí tienes, mijo. Cuidado que quema más que el sol de mediodía.
+		Cristina: Aquí tienes, mijo. Cuidado que quema más que sol del llano.
 		{{GameManager.name_player}}: Gracias, Cristina. Está buenísima.
 	else
-		Cristina: Ay, mijo... las ganas sobran pero el bolívar falta. Vuelve cuando tengas con qué pagar.
+		Cristina: Ay, mijo... las ganas sobran pero bolos faltan. Vuelve cuando tengas buen sencillo.
 	=> opciones
 
 - ¿Por qué te da miedo hablar de mi abuelo?
-	Cristina: No es miedo a él, {{GameManager.name_player}}... es miedo a la sombra que lo sigue.
-	Cristina: El pueblo está "trancao", la tierra ya no da como antes. La gente necesita un culpable y tu abuelo se puso el blanco solito cuando retó a quien no debía.
+	Cristina: No es miedo a él, {{GameManager.name_player}}... es miedo a la vaina que lo sigue.
+	Cristina: El pueblo está "trancao", la tierra ya no da como antes. La gente necesita un culpable y tu abuelo no supo contar bien su historia.
 	=> opciones
 
-- Tengo que seguir mi camino.
+- Me voy por ahí, gracias por todo.
 	=> despedida
 
 ~ despedida
-% Cristina: ¡Con cuidado! Y no le digas a Duglas que estuvimos hablando, ¿oíste?
-% Cristina: Dale un saludo a Leonardo si lo ves por el río.
-% Cristina: ¡Que Dios te cuide de los malos encuentros, muchacho!
+% Cristina: ¡Con cuidado! Y no le digas a Douglas que estuvimos hablando.
+% Cristina: Dile a Leonardo que traiga esa leña.
+% Cristina: ¡Que Dios te cuide de los malos encuentros, mijito!
 
 => END

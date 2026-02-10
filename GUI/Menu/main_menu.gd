@@ -9,6 +9,7 @@ extends Control
 
 
 func _ready():
+	
 	options_container.visible = false
 	buttons_container.visible = true
 

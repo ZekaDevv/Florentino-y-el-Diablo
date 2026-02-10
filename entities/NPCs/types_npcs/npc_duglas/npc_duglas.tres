@@ -1,6 +1,6 @@
 [gd_resource type="SpriteFrames" load_steps=4 format=3 uid="uid://cewgcbt47dkbc"]
 
-[ext_resource type="Texture2D" uid="uid://dijxj3mouqqte" path="res://assets/characters/npcs/el_sugar_frame-Sheet.png" id="1_yxc3l"]
+[ext_resource type="Texture2D" uid="uid://ic0at7r08ltn" path="res://assets/characters/npcs/npc_idle_douglas.png" id="1_yxc3l"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uy26x"]
 atlas = ExtResource("1_yxc3l")
@@ -21,5 +21,5 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 3.0
 }]

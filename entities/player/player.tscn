@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://b3sky51l2wo47"]
+[gd_scene load_steps=7 format=3 uid="uid://b3sky51l2wo47"]
 
 [ext_resource type="SpriteFrames" uid="uid://12bc4iysidab" path="res://entities/player/player.tres" id="1_pwxuj"]
 [ext_resource type="Script" uid="uid://dffq5hgf2v4tf" path="res://entities/player/player.gd" id="1_ycxet"]
-[ext_resource type="Script" uid="uid://baqq1p1jgfdy3" path="res://components/inventory/inventory_component.gd" id="3_bectd"]
 [ext_resource type="PackedScene" uid="uid://cf26lt1a2neto" path="res://components/health/health_component.tscn" id="4_gd5fs"]
 [ext_resource type="PackedScene" uid="uid://diir3s5wfvf3p" path="res://components/inventory/inventory_component.tscn" id="6_7thud"]
 [ext_resource type="PackedScene" uid="uid://cvrxfsw1ouli" path="res://components/hurtbox/hurtbox_types/hurtbox_component_player.tscn" id="14_afbqv"]
@@ -11,14 +10,13 @@
 size = Vector2(17, 24)
 
 [node name="Player" type="CharacterBody2D"]
-collision_layer = 2
-collision_mask = 15
+collision_layer = 6
+collision_mask = 79
 script = ExtResource("1_ycxet")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2.25, 2.25)
 limit_smoothed = true
-script = ExtResource("3_bectd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("1_pwxuj")
@@ -31,9 +29,11 @@ shape = SubResource("RectangleShape2D_41hvs")
 
 [node name="HealthComponent" parent="." instance=ExtResource("4_gd5fs")]
 is_player = true
-max_health = 5
+max_health = 10
 
 [node name="HurtboxComponentPlayer" parent="." instance=ExtResource("14_afbqv")]
+collision_layer = 4
+collision_mask = 0
 
 [node name="InventoryComponent" parent="." instance=ExtResource("6_7thud")]
 

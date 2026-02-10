@@ -8,5 +8,6 @@ script = ExtResource("1_mky6i")
 scene_bullet = ExtResource("2_mky6i")
 spawn_margin = 0.0
 arc_spread = 0.0
+attack_mask = 16
 
 [node name="Muzzle" type="Marker2D" parent="."]

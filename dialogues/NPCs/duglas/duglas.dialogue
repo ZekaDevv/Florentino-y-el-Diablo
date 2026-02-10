@@ -1,40 +1,35 @@
 ~ start
 
-% Duglas: [shake rate=20 level=10]¡Largo de aquí, muchacho![/shake] Ya bastante sal nos has traído hoy.
-% Duglas: ¿Qué buscas merodeando por mis tierras? ¿No te basta con el daño que ya hizo tu abuelo?
-% Duglas: ¡Epa! Ni un paso más cerca. No quiero que tu sombra toque mis cercas.
+% Duglas: [shake rate=20 level=10]¡Largo de aquí, Chamito![/shake] Estamos salados por culpa de Ustedes.
+% Duglas: ¿Qué buscas paseando por mis tierras? ¿No basta con el peo que dejó tu abuelo?
+% Duglas: ¡Epa! No camine más carajito. No quiero que toques mis vainas.
 
 ~ opciones
-Duglas: [speed=0.6]Hueles a azufre y a desgracia.[/speed] Habla rápido antes de que te eche a patadas.
+Duglas: [speed=0.6]Hueles a azufre y a tristeza.[/speed] Habla rápido antes de que te corra de aquí.
 
 - Mi abuelo no tiene la culpa de que se muera el ganado.
-	Duglas: [shake rate=30 level=15]¡¿Ah, no?! [/shake] Antes de que ese viejo loco retara al Diablo, aquí la tierra era generosa.
-	Duglas: Ahora las vacas se secan, el río trae lodo y tú caminas como si no pasara nada.
-	Duglas: Eres la viva imagen de Florentino... una mancha en este pueblo.
-	=> opciones
-
-- Cristina me vendió una empanada hace un rato...
-	Duglas: ¡Esa mujer mía no aprende! Vive con el corazón blando y la cabeza en las nubes.
-	Duglas: Mantente lejos de mi puesto y de mi mujer. No quiero que le pegues tu mala suerte.
+	Duglas: [shake rate=30 level=15]¡¿Ah, no?! [/shake] Antes de que ese viejo retara al Diablo, aquí la tierra era buena pa' las vacas.
+	Duglas: Ahora las vacas se enferman, el río siempre anda crecido y tú caminas bien relajadito.
+	Duglas: Eres la viva imagen de Florentino... el peligro de este pueblo.
 	=> opciones
 
 - ¿Dónde está Leonardo? Queríamos ir al río.
-	Duglas: [speed=0.4]A mi hijo no lo vuelves a nombrar.[/speed]
-	Duglas: Bastante trabajo me cuesta limpiar el rastro que dejas cuando juegas con él. 
-	Duglas: Leonardo va a ser un hombre de trabajo, no un vago coplero rodeado de fantasmas.
+	Duglas: [speed=0.4]A mi niño no lo vuelves a nombrar.[/speed]
+	Duglas: Bastante trabajo me cuesta mantenerlo a raya para que vengas a alborotarlo.
+	Duglas: Leonardo va a ser un hombre de trabajo, no un coplero bobo rodeado de loqueras.
 	=> opciones
 
-- Algún día el pueblo sabrá la verdad.
+- Algún día podremos salvar al pueblo.
 	Duglas: La única verdad es que desde que Florentino abrió esa boca en Santa Inés, nos condenó a todos.
 	Duglas: No hay verso que reviva a mis novillos, {{GameManager.name_player}}.
 	=> opciones
 
-- Ya me voy, no quiero problemas.
+- Yo me voy, no quiero problemas.
 	=> despedida
 
 ~ despedida
-% Duglas: ¡Eso, corre donde el viejo! Que las sombras te guíen.
-% Duglas: ¡Y no te quiero ver cerca de Leonardo, oíste bien!
-% Duglas: ¡Vete antes de que se me muera otra vaca por tu culpa!
+% Duglas: ¡Eso, vaya y corra a donde el viejo! Que las sombras te guíen.
+% Duglas: ¡Y no te quiero ver cerca de Leonardo.! ¿Escuchaste?
+% Duglas: ¡Vete antes de que se me muera otra res por tu culpa!
 
 => END

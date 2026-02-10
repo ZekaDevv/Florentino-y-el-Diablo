@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://beh1iq4e2q6jq"
-path="res://.godot/imported/niño_chambeador.png-490d3f5da48851f497ff7b7309f8dcda.ctex"
+uid="uid://dd7d3vtb0u0vs"
+path="res://.godot/imported/death.png-b4b505c62ba6e24a8e69b8e7610cf6ba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/npcs/niño_chambeador.png"
-dest_files=["res://.godot/imported/niño_chambeador.png-490d3f5da48851f497ff7b7309f8dcda.ctex"]
+source_file="res://assets/characters/player/death.png"
+dest_files=["res://.godot/imported/death.png-b4b505c62ba6e24a8e69b8e7610cf6ba.ctex"]
 
 [params]
 

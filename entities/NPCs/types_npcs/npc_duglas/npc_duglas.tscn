@@ -18,5 +18,5 @@ animation = &"idle"
 frame_progress = 0.44936797
 
 [node name="InteractIcon" parent="." index="3"]
-position = Vector2(0, -25.000002)
-scale = Vector2(0.56250006, 0.62500006)
+position = Vector2(0, -28)
+scale = Vector2(0.875, 0.938)

@@ -16,6 +16,9 @@ enum ShootPattern {BASE, ARC, RADIAL, DOUBLE, FAN}
 @export var arc_spread: float = 40.0
 @export_range(0.0, 360.0) var fan_angle: float = 160.0
 
+@export_group("Collision Settings")
+@export_flags_2d_physics var attack_mask: int = 0
+
 var can_shoot = true
 
 @onready var muzzle: Marker2D = $Muzzle
@@ -97,6 +100,8 @@ func _spawn_bullet(dir: Vector2, source_vel: Vector2) -> void:
 func _spawn_bullet_offset(dir: Vector2, source_velocity: Vector2, extra_offset: Vector2) -> void:
 	var bullet = scene_bullet.instantiate()
 	bullet.direction = dir
+
+	bullet.set_meta("target_mask", attack_mask)
 
 	var _parallel_speed = source_velocity.project(dir)
 	var _lateral_velocity = source_velocity - _parallel_speed

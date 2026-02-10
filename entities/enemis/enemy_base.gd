@@ -7,6 +7,7 @@ class_name EnemyBase
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D 
 @onready var health_component: Node = $HealthComponent 
 @onready var hurtbox_component: Node = $HurtboxComponent
+@onready var weapon_holder: Node2D = $Weapon
 
 @export_group("Estadísticas de Movimiento")
 @export var move_speed: float = 60.0
@@ -17,6 +18,7 @@ class_name EnemyBase
 @export var attack_range: float = 25.0
 @export var attack_cooldown: float = 1.0
 
+var current_weapon: Weapon
 var player: CharacterBody2D = null
 
 func _ready():
@@ -24,11 +26,19 @@ func _ready():
 		health_component.health_depleted.connect(_on_death)
 	
 	player = get_tree().get_first_node_in_group("player")
+
+	if GameManager.has_signal("player_died"):
+		GameManager.player_died.connect(_on_player_died)
 	
 	nav_agent.path_desired_distance = 10.0
 	nav_agent.target_desired_distance = 10.0
 
 	state_machine.init(self)
+
+	if weapon_holder.get_child_count() > 0:
+				var child = weapon_holder.get_child(0)
+				if child is Weapon:
+						current_weapon = child
 	
 func _physics_process(_delta):
 	move_and_slide()
@@ -54,3 +64,6 @@ func _update_animation_direction() -> void:
 
 func _on_death() -> void:
 	queue_free()
+
+func _on_player_died():
+	player = null

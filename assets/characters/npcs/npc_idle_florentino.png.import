@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cl1nhkgtvrd5t"
-path="res://.godot/imported/el_sugar.png-ed7fc8700073a506d5277636b73191a6.ctex"
+uid="uid://dd5vvhl64us43"
+path="res://.godot/imported/npc_idle_florentino.png-3761538ed6b311d3932d81e3394663b8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/npcs/el_sugar.png"
-dest_files=["res://.godot/imported/el_sugar.png-ed7fc8700073a506d5277636b73191a6.ctex"]
+source_file="res://assets/characters/npcs/npc_idle_florentino.png"
+dest_files=["res://.godot/imported/npc_idle_florentino.png-3761538ed6b311d3932d81e3394663b8.ctex"]
 
 [params]
 

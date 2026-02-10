@@ -1,35 +1,35 @@
 ~ start
 
 # Tres saludos aleatorios que muestran su naturaleza foránea y amigable
-% Juan: ¡Hola! Tú debes ser el nieto del famoso Florentino, ¿cierto? Soy Juan, llegué hace poco y todavía me pierdo en estas calles.
-% Juan: ¡Epa, muchacho! Qué bueno encontrar a alguien que no me mire con cara de pocos amigos. Soy Juan, un caminante sin rumbo fijo.
-% Juan: ¡Saludos, {{GameManager.name_player}}! He oído tu nombre en el mercado... aunque no siempre por cosas buenas, pero yo no me fío de chismes.
+% Juan: ¡Hola! Tú debes ser el nieto del famoso Florentino, ¿No? Soy Juan, llegué hace poquito.
+% Juan: ¡Epa, chamo! Qué bueno encontrar a alguien que no me mire con cara chimba. Soy Juancho.
+% Juan: Hola, {{GameManager.name_player}}! He oído tu nombre en el mercado... aunque no fue algo Chévere, pero yo no le paro bolas a eso.
 
 ~ opciones
 # Línea de anclaje que permanece visible mientras Juan pregunta
-Juan: Mira, mijo, no tengo familia ni a nadie a quien rendirle cuentas, pero tengo la cabeza llena de dudas. ¿Me ayudas a entender este pueblo?
+Juan: Mira, chamo, no tengo familia, pero tengo la cabeza llena de dudas. ¿Me ayudas a entender que pasa aqui?
 
-- ¿Qué te han dicho Duglas y Cristina?
-	Juan: ¡Ay, mijo! Hablar con ellos es como escuchar a dos pájaros distintos.
-	Juan: Duglas dice que tu abuelo es un [wave]imán de desgracias[/wave] y que por su culpa se muere el ganado.
-	Juan: Pero Cristina... ella me dice que Florentino era el alma de las fiestas y que es un hombre bueno.
-	Juan: [speed=0.5]Dime tú... ¿quién de los dos tiene la verdad?[/speed]
+- ¿Qué te han dicho Douglas y Cristina?
+	Juan: ¡Ah! Hablar con ellos es como escuchar a dos guacharacas peleando.
+	Juan: Douglas dice que tu abuelo es un [wave]imán de desgracias[/wave] y que por su culpa se muere el ganado.
+	Juan: Pero Cristina... ella me dice que Florentino era el alma de las fiestas y que es un hombre de bien.
+	Juan: [speed=0.5]Pero yo he visto a tu abuelo de lejos cuando baja al mercao', es buenagente.[/speed]
 	=> opciones
 
-- ¿Por qué te da tanta curiosidad mi abuelo?
-	Juan: Donde yo vengo, las leyendas son solo cuentos para dormir. Pero aquí... aquí la gente parece que vive dentro de la leyenda.
-	Juan: Esa historia del duelo en Santa Inés me tiene desvelado. ¿De verdad le ganó al Diablo verso a verso?
-	Juan: Me cuesta creer que un hombre sea un "mal agüero" solo por ser valiente.
+- ¿Por qué tanta curiosidad por mi abuelo?
+	Juan: De donde yo vengo, las leyendas son solo cuentos para asustar. Pero aquí... aquí la gente parece que vive dentro de esa leyenda.
+	Juan: Esa historia de Santa Inés me tiene impactao'. ¿De verdad le ganó al Diablo con coplas?.
+	Juan: Me cuesta creer que un hombre sea un "hombre maldito" solo por ser valiente.
 	=> opciones
 
 - Ser huérfano no es fácil en un sitio así. (Vínculo)
-	Juan: No lo es, muchacho. Uno siempre busca un lugar donde echar raíces, pero este pueblo parece que escupe a los extraños.
-	Juan: Me siento un poco como tú... fuera de lugar. La diferencia es que tú tienes a Florentino, y yo solo tengo mis preguntas.
+	Juan: No lo es, mi pana. Uno siempre busca un lugar donde echar raíces, pero este pueblo parece que daña a los extraños.
+	Juan: Me siento un poco como tú... fuera de lugar. La diferencia es que tú tienes a Florentino, y yo solo tengo mis coroticos...
 	=> opciones
 
 - ¿Te quedarás aquí a pesar de la "maldición"?
-	Juan: He caminado mucho para asustarme por un poco de viento y miedos ajenos.
-	Juan: Además, me caes bien. Siento que tú y yo somos los únicos que no estamos mirando hacia atrás con miedo.
+	Juan: He caminado mucho para irme por un poco de viento y miedo a algo que no he visto.
+	Juan: Además, eres Chévere. Siento que tú y yo somos los únicos que no estamos mirando hacia atrás con miedo.
 	=> opciones
 
 - Tengo que seguir ayudando a mi abuelo.
@@ -37,8 +37,8 @@ Juan: Mira, mijo, no tengo familia ni a nadie a quien rendirle cuentas, pero ten
 
 ~ despedida
 # Tres despedidas aleatorias que refuerzan su amistad
-% Juan: ¡Nos vemos luego! Iré a ver si Duglas se calmó un poco antes de pedirle agua.
-% Juan: ¡Cuídate, {{GameManager.name_player}}! Seguiré buscando respuestas por mi cuenta.
-% Juan: ¡Pórtate bien! Y dile a tu abuelo que hay gente que todavía admira a los copleros.
+% Juan: ¡Nos vemos luego! Iré a ver si Douglas se calmó un poco antes de pedirle agua.
+% Juan: pilas por ahí, {{GameManager.name_player}}! Voy a seguir buscando respuestas por mi cuenta.
+% Juan: ¡Bien! Y dile a tu abuelo que hay gente que todavía admira a los copleros Cómo el.
 
 => END

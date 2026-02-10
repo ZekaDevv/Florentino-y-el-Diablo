@@ -15,7 +15,7 @@ func _physics_process(delta):
 	var distance = enemy.global_position.distance_to(enemy.player.global_position)
 	
 	if distance < enemy.attack_range:
-		#state_machine.change_state(state_machine.states["attack"])
+		state_machine.change_state(state_machine.states["EnemyAttack".to_lower()])
 		return
 	
 	if distance > enemy.detection_range * range_exit:

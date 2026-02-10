@@ -1,6 +1,6 @@
 [gd_resource type="SpriteFrames" load_steps=4 format=3 uid="uid://sv3ok62uuq4v"]
 
-[ext_resource type="Texture2D" uid="uid://dmj8k7ayigmhj" path="res://assets/characters/npcs/señora_buchona-frame-Sheet.png" id="1_g03em"]
+[ext_resource type="Texture2D" uid="uid://dxu5dxbdcfwsg" path="res://assets/characters/npcs/npc_idle_cristina.png" id="1_g03em"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vib0t"]
 atlas = ExtResource("1_g03em")
@@ -21,5 +21,5 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 3.0
 }]

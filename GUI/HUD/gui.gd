@@ -12,7 +12,7 @@ func _ready() -> void:
 	GameManager.health_changed.connect(update_heart)
 
 
-func set_max(max: int) -> void: 
+func set_max(max: float) -> void: 
 	for child in container.get_children():  
 		child.free()
 
@@ -20,7 +20,7 @@ func set_max(max: int) -> void:
 		var heart = heart_gui_scene.instantiate()
 		container.add_child(heart)
 
-func update_heart(current_health: int) -> void:
+func update_heart(current_health: float) -> void:
 	var hearts = container.get_children()
 
 	for i in range(hearts.size()):

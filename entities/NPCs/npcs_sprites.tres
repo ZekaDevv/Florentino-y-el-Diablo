@@ -1,11 +1,11 @@
 [gd_resource type="SpriteFrames" load_steps=18 format=3 uid="uid://ykdfl8ph8meu"]
 
-[ext_resource type="Texture2D" uid="uid://dmj8k7ayigmhj" path="res://assets/characters/npcs/señora_buchona-frame-Sheet.png" id="1_qbnje"]
-[ext_resource type="Texture2D" uid="uid://dijxj3mouqqte" path="res://assets/characters/npcs/el_sugar_frame-Sheet.png" id="2_rxliu"]
-[ext_resource type="Texture2D" uid="uid://dd5vvhl64us43" path="res://assets/characters/npcs/florentino.png" id="3_iwmo1"]
-[ext_resource type="Texture2D" uid="uid://dl001rpfyd5mc" path="res://assets/characters/npcs/gabysuki-frame-Sheet.png" id="4_72oqs"]
-[ext_resource type="Texture2D" uid="uid://beh1iq4e2q6jq" path="res://assets/characters/npcs/niño_chambeador.png" id="5_etrui"]
-[ext_resource type="Texture2D" uid="uid://dnj8yrqs3r4df" path="res://assets/characters/npcs/niño_sifrino_frame-Sheet.png" id="6_tesfn"]
+[ext_resource type="Texture2D" path="res://assets/characters/npcs/señora_buchona-frame-Sheet.png" id="1_qbnje"]
+[ext_resource type="Texture2D" path="res://assets/characters/npcs/el_sugar_frame-Sheet.png" id="2_rxliu"]
+[ext_resource type="Texture2D" uid="uid://dd5vvhl64us43" path="res://assets/characters/npcs/npc_idle_florentino.png" id="3_iwmo1"]
+[ext_resource type="Texture2D" path="res://assets/characters/npcs/gabysuki-frame-Sheet.png" id="4_72oqs"]
+[ext_resource type="Texture2D" path="res://assets/characters/npcs/niño_chambeador.png" id="5_etrui"]
+[ext_resource type="Texture2D" path="res://assets/characters/npcs/niño_sifrino_frame-Sheet.png" id="6_tesfn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_867sl"]
 atlas = ExtResource("1_qbnje")
