@@ -26,6 +26,8 @@ func _ready():
 	DialogueManager.dialogue_started.connect(_on_dialogue_started)
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 
+	health_component.health_changed.connect(flash_red)
+
 func _physics_process(delta: float) -> void:
 	if GameManager.is_dialog_active:
 		sprite_animation.play("idle")
@@ -96,3 +98,8 @@ func _smooth_zoom(target_zoom: Vector2):
 		tween.tween_property(camera, "zoom", target_zoom, tiempo_zoom)\
 				.set_trans(Tween.TRANS_QUART)\
 				.set_ease(Tween.EASE_OUT)
+
+func flash_red(_amount):
+		var tween = create_tween()
+		tween.tween_property(sprite_animation, "modulate", Color(1, 0, 0), 0.1)
+		tween.tween_property(sprite_animation, "modulate", Color(1, 1, 1), 0.5)

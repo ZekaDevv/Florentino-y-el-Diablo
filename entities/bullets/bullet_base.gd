@@ -57,7 +57,7 @@ func _on_animation_finished():
 		queue_free()
 
 
-func _on_body_entered(body: Node2D) -> void:
+func _on_body_entered(_body: Node2D) -> void:
 	explode()
 
 func _on_hitbox_entered(area: Area2D) -> void:

@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://cdqs3fb7vddjo"]
+
+[ext_resource type="PackedScene" uid="uid://n5vr1f8vrqjx" path="res://entities/enemis/enemy_base.tscn" id="1_5ywpb"]
+[ext_resource type="SpriteFrames" uid="uid://d263rk226p3pn" path="res://entities/enemis/types_enemis/complero_hard/coplero_hard.tres" id="2_7d7a6"]
+[ext_resource type="PackedScene" uid="uid://c6w1ni4spwjd5" path="res://entities/weapons/weapon_types/maracas.tscn" id="3_8b5s2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1adbf"]
+size = Vector2(20, 31)
+
+[node name="CopleroHard" instance=ExtResource("1_5ywpb")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = ExtResource("2_7d7a6")
+animation = &"walk_lateral"
+frame_progress = 0.053210746
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_1adbf")
+
+[node name="HealthComponent" parent="." index="2"]
+max_health = 20
+
+[node name="Maracas" parent="Weapon" index="0" instance=ExtResource("3_8b5s2")]
+attack_mask = 4

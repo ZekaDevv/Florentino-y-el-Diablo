@@ -73,7 +73,7 @@ func change_active_slot(index: int) -> void:
 
 
 func load_game_scene():
-	get_tree().change_scene_to_file("res://scenes/PUEBLO/PuebloPrincipal.tscn")
+	get_tree().change_scene_to_file("res://scenes/village/village.tscn")
 
 func quit_game():
 	get_tree().quit()

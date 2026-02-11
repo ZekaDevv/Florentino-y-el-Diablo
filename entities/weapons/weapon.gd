@@ -31,6 +31,7 @@ func shoot(dir: Vector2, source_velocity: Vector2) -> void:
 	get_tree().create_timer(cooldown).timeout.connect(func(): can_shoot = true)
 
 
+
 	match shoot_pattern:
 		
 		ShootPattern.BASE:

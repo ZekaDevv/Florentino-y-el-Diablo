@@ -1,10 +1,16 @@
-[gd_resource type="Resource" script_class="WeaponData" load_steps=3 format=3 uid="uid://jtiq42lcxkbp"]
+[gd_resource type="Resource" script_class="WeaponData" load_steps=5 format=3 uid="uid://jtiq42lcxkbp"]
 
 [ext_resource type="Script" uid="uid://ci6d6cumf6j1d" path="res://resources/weapon_data/weapon_data.gd" id="1_ev60y"]
-[ext_resource type="PackedScene" uid="uid://cgxujxt0vo28a" path="res://entities/weapons/weapon_types/drum.tscn" id="2_rtk6g"]
+[ext_resource type="Texture2D" uid="uid://c8p8vdkwf3xmy" path="res://assets/instruments/drum.png" id="1_il0g1"]
+[ext_resource type="PackedScene" uid="uid://cgxujxt0vo28a" path="res://entities/weapons/weapon_types/drum/drum.tscn" id="2_rtk6g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_irpwn"]
+atlas = ExtResource("1_il0g1")
+region = Rect2(200, 5, 17, 21)
 
 [resource]
 script = ExtResource("1_ev60y")
 name_weapon = "Drum"
+icon = SubResource("AtlasTexture_irpwn")
 weapon_scene = ExtResource("2_rtk6g")
 metadata/_custom_type_script = "uid://ci6d6cumf6j1d"

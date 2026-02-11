@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://ddlphbl64tta1"]
+
+[ext_resource type="PackedScene" uid="uid://n5vr1f8vrqjx" path="res://entities/enemis/enemy_base.tscn" id="1_7lcja"]
+[ext_resource type="SpriteFrames" uid="uid://bxrvk3iikhcsu" path="res://entities/enemis/types_enemis/coplero_base/coplero_base.tres" id="2_swxct"]
+[ext_resource type="PackedScene" uid="uid://bfykcfykr583g" path="res://entities/weapons/weapon_types/cuatro.tscn" id="3_swxct"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wc2jb"]
+size = Vector2(20, 31)
+
+[node name="CompleroBase" instance=ExtResource("1_7lcja")]
+move_speed = 100.0
+detection_range = 200.0
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = ExtResource("2_swxct")
+animation = &"idle"
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_wc2jb")
+
+[node name="HealthComponent" parent="." index="2"]
+max_health = 15
+
+[node name="Cuatro" parent="Weapon" index="0" instance=ExtResource("3_swxct")]
+position = Vector2(0, 1)
+attack_mask = 4

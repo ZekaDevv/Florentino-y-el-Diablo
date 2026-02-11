@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://68fuomcpedka"]
+
+[ext_resource type="PackedScene" uid="uid://n5vr1f8vrqjx" path="res://entities/enemis/enemy_base.tscn" id="1_gl8e4"]
+[ext_resource type="SpriteFrames" uid="uid://bxrvk3iikhcsu" path="res://entities/enemis/types_enemis/coplero_base/coplero_base.tres" id="2_863co"]
+[ext_resource type="PackedScene" uid="uid://cgxujxt0vo28a" path="res://entities/weapons/weapon_types/drum/drum.tscn" id="3_8scdc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_momr7"]
+size = Vector2(20, 31)
+
+[node name="EnemyBase" instance=ExtResource("1_gl8e4")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = ExtResource("2_863co")
+animation = &"idle"
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_momr7")
+
+[node name="HealthComponent" parent="." index="2"]
+max_health = 15
+
+[node name="Drum" parent="Weapon" index="0" instance=ExtResource("3_8scdc")]
+attack_mask = 4

@@ -17,6 +17,7 @@ script = ExtResource("1_ycxet")
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2.25, 2.25)
 limit_smoothed = true
+position_smoothing_enabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("1_pwxuj")

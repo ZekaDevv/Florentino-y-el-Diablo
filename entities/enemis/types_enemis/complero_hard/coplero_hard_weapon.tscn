@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://bnyr83hjt4du7"]
+
+[ext_resource type="PackedScene" uid="uid://n5vr1f8vrqjx" path="res://entities/enemis/enemy_base.tscn" id="1_68xsf"]
+[ext_resource type="SpriteFrames" uid="uid://d263rk226p3pn" path="res://entities/enemis/types_enemis/complero_hard/coplero_hard.tres" id="2_8414f"]
+[ext_resource type="PackedScene" uid="uid://cm4iqlnpjscd6" path="res://entities/weapons/weapon_types/harp.tscn" id="3_i3any"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ybnf0"]
+size = Vector2(20, 31)
+
+[node name="CopleroHardWeapon" instance=ExtResource("1_68xsf")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = ExtResource("2_8414f")
+animation = &"idle"
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_ybnf0")
+
+[node name="HealthComponent" parent="." index="2"]
+max_health = 15
+
+[node name="Harp" parent="Weapon" index="0" instance=ExtResource("3_i3any")]
+attack_mask = 4

@@ -40,6 +40,8 @@ func _ready():
 				if child is Weapon:
 						current_weapon = child
 	
+	health_component.health_changed.connect(flash_red)
+
 func _physics_process(_delta):
 	move_and_slide()
 	_update_animation_direction()
@@ -67,3 +69,8 @@ func _on_death() -> void:
 
 func _on_player_died():
 	player = null
+
+func flash_red():
+	var tween = create_tween()
+	tween.tween_property(sprite, "modulate", Color(1, 0, 0), 0.1)
+	tween.tween_property(sprite, "modulate", Color(1, 1, 1), 0.5)
