@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://kl08v8xajr5q"]
+
+[ext_resource type="PackedScene" uid="uid://n5vr1f8vrqjx" path="res://entities/enemis/enemy_base.tscn" id="1_lgtcy"]
+[ext_resource type="SpriteFrames" uid="uid://bxrvk3iikhcsu" path="res://entities/enemis/types_enemis/coplero_base/coplero_base.tres" id="2_hro3y"]
+[ext_resource type="PackedScene" uid="uid://d3osccu7e4pcm" path="res://entities/weapons/weapon_types/guitar.tscn" id="3_o4bqq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_buw0h"]
+size = Vector2(20, 31)
+
+[node name="EnemyBase" instance=ExtResource("1_lgtcy")]
+move_speed = 150.0
+attack_range = 100.0
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = ExtResource("2_hro3y")
+animation = &"idle"
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_buw0h")
+
+[node name="Guitar" parent="Weapon" index="0" instance=ExtResource("3_o4bqq")]
+position = Vector2(0, 1)
+attack_mask = 4

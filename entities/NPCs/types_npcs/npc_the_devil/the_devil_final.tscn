@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://tcm5pj7giq8s"]
+
+[ext_resource type="PackedScene" uid="uid://bxcexl86l175o" path="res://entities/NPCs/types_npcs/npc_the_devil/npc_the_devil.tscn" id="1_6cdy4"]
+[ext_resource type="Resource" uid="uid://cufsecdtjnqeo" path="res://dialogues/NPCs/the_devil/the_devil_fianl.dialogue" id="2_tborr"]
+
+[node name="TheDevil" instance=ExtResource("1_6cdy4")]
+dialogue_resource = ExtResource("2_tborr")

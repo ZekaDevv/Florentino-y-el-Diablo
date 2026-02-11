@@ -27,6 +27,7 @@ func start_dialogue():
 	DialogueManager.show_example_dialogue_balloon(dialogue_resource, dialogue_start)
 
 func _on_dialogue_finished(_resource):
+	if not is_inside_tree(): return
 	await get_tree().create_timer(0.2).timeout
 	GameManager.is_dialog_active = false
 

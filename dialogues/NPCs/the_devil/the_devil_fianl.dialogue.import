@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cufsecdtjnqeo"
+path="res://.godot/imported/the_devil_fianl.dialogue-5bfd25169b5434a040b73f7491d027a3.tres"
+
+[deps]
+
+source_file="res://dialogues/NPCs/the_devil/the_devil_fianl.dialogue"
+dest_files=["res://.godot/imported/the_devil_fianl.dialogue-5bfd25169b5434a040b73f7491d027a3.tres"]
+
+[params]
+
+defaults=true

@@ -1,11 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://bxcexl86l175o"]
 
 [ext_resource type="PackedScene" uid="uid://c2xixm41tkrhq" path="res://entities/NPCs/npc_base.tscn" id="1_d5a7v"]
-[ext_resource type="Resource" uid="uid://djfjifon3k6yn" path="res://dialogues/NPCs/duglas/duglas.dialogue" id="2_12vfn"]
+[ext_resource type="Resource" uid="uid://cmkht5yeso2q7" path="res://dialogues/NPCs/the_devil/the_devil.dialogue" id="2_d5a7v"]
 [ext_resource type="SpriteFrames" uid="uid://pedr7oyodwa6" path="res://entities/NPCs/types_npcs/npc_the_devil/npc_the_devil.tres" id="3_g5g4r"]
 
 [node name="TheDevil" instance=ExtResource("1_d5a7v")]
-dialogue_resource = ExtResource("2_12vfn")
+dialogue_resource = ExtResource("2_d5a7v")
 
 [node name="CollisionShape2D" parent="." index="0"]
 position = Vector2(0, 6.5)

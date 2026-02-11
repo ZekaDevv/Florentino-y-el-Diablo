@@ -8,6 +8,8 @@
 size = Vector2(20, 31)
 
 [node name="CopleroHardWeapon" instance=ExtResource("1_68xsf")]
+move_speed = 70.0
+detection_range = 200.0
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = ExtResource("2_8414f")

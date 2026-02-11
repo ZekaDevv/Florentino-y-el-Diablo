@@ -36,5 +36,3 @@ func _physics_process(delta):
 	if direction.x != 0:
 		enemy.sprite.flip_h = direction.x < 0
 	
-
-	

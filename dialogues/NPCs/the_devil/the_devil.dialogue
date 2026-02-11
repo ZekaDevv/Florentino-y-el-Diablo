@@ -1,0 +1,15 @@
+~ start
+
+Diablo: [[Jovencito...|Muchacho...]] veo que tienes dedos ligeros para el cuatro, pero el alma pesada.
+Diablo: Aquí en la sabana la música se la lleva el viento y el tiempo oxida las cuerdas.
+Diablo: ¿Por qué no te vienes conmigo? Te llevaré a una fiesta donde la noche es eterna y el bordonear nunca se detiene.
+
+- ¡Vámonos! Quiero ver esa fiesta.
+	Diablo: [shake rate=20 level=10]¡Así se habla, condenao![/shake] Agarra tu instrumento... el camino es largo y caliente.
+	# Aquí ocurre la magia: Llamamos a la función de cambio de escena
+	do GameManager.go_to_combat() 
+	=> END
+
+- No, yo me quedo en mi tierra.
+	Diablo: Jmmm... la duda mata más rápido que la sequía. Ya nos volveremos a encontrar, Florentino.
+	=> END

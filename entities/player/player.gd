@@ -20,6 +20,7 @@ var _current_weapon: Weapon
 var deadzone: float = 0.99
 
 func _ready():
+	GameManager.is_dialog_active = false
 	add_to_group("player")
 	GameManager.player_died.connect(_on_death)
 
@@ -34,7 +35,7 @@ func _physics_process(delta: float) -> void:
 		velocity = Vector2.ZERO
 		return
 
-
+		
 	if weapon_holder.get_child_count() > 0:
 		var child = weapon_holder.get_child(0)
 		_current_weapon = child

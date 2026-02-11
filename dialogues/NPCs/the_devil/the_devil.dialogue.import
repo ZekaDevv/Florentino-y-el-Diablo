@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cmkht5yeso2q7"
+path="res://.godot/imported/the_devil.dialogue-7ef5c9013725f040c65cba234176af57.tres"
+
+[deps]
+
+source_file="res://dialogues/NPCs/the_devil/the_devil.dialogue"
+dest_files=["res://.godot/imported/the_devil.dialogue-7ef5c9013725f040c65cba234176af57.tres"]
+
+[params]
+
+defaults=true

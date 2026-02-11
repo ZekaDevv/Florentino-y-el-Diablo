@@ -18,6 +18,17 @@ Cristina: ¿Qué buscas, {{GameManager.name_player}}? ¿Quieres hablar o me vas 
 	Cristina: [speed=0.5](Baja la voz y mira a los lados)[/speed] Yo lo sé, mijo. Yo conocí a Florentino cuando sus coplas animaban a todos y no los espantaban.
 	Cristina: Pero Douglas, mi marido... todo terco. Perdimos tres novillas esta semana y él necesita a alguien a quien culpar para no llorar de la rabia.
 	=> opciones
+	
+- ¿Ha pasado algo raro en el camino últimamente?
+    Cristina: [speed=0.8]Ayer mismo, el viejo Ramón dice que escuchó un galope sin caballo pasando el río...[/speed]
+    Cristina: Hay que tener ojo pelao, {{GameManager.name_player}}. Cuando el Silbón anda cerca, el perro late y el ganado se echa.
+    Cristina: No te quedes en las calcetas cuando el sol se ponga, que en la oscuridad hasta las sombras tienen hambre.
+    => opciones
+
+- Cuéntame algo que la gente no sepa de estas tierras.
+    Cristina: ¿Sabes por qué el Diablo odia tanto al que canta? Porque dice la leyenda que una copla bien tirada puede amarrar hasta al mismo demonio a un poste.
+    Cristina: Por eso tu abuelo era tan grande; él no cantaba solo con la garganta, cantaba con el alma "enviandada". 
+    Cristina: Pero cuidado, mijo, que el que reta a la oscuridad a veces se queda sin luz para volver a casa.opcionesopciones
 
 - Dame una empanada de carne (10 Bolívares)
 	if GameManager.gold >= 10

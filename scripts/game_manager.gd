@@ -76,5 +76,19 @@ func load_game_scene():
 	get_tree().change_scene_to_file("res://scenes/village/village.tscn")
 
 func quit_game():
-	get_tree().quit()
+	get_tree().quit() 
+	
+func go_to_combat() -> void:
+	await get_tree().create_timer(0.2).timeout
+	get_tree().paused = false
+	
+	get_tree().change_scene_to_file("res://scenes/combat/main_combat.tscn")
 
+
+func go_to_llano() -> void:
+	await get_tree().create_timer(1.0).timeout 
+	
+	is_dialog_active = false 
+	get_tree().paused = false 
+	
+	get_tree().change_scene_to_file("res://scenes/village/village.tscn")

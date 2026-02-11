@@ -1,0 +1,13 @@
+~ start
+
+Diablo: [shake rate=10 level=5]Jmmm...[/shake] Veo que no te quemas tan fácil, muchacho. Tienes el cuero duro como caimán de pozo.
+Diablo: Has superado esta prueba, pero no cantes victoria todavía. En el Llano el camino es largo y la noche tiene muchos ojos.
+Diablo: Vuelve a tu tierra, {{GameManager.name_player}}. Nos volveremos a ver cuando el bordonear del arpa suene a despedida.
+
+- ¡No te tengo miedo!
+	Diablo: [wave]Jajajaja...[/wave] Eso dicen todos hasta que sienten el frío en la espalda.
+	Diablo: ¡Lárgate antes de que me arrepienta!
+	
+	# Llamamos a la función para volver y cerramos el diálogo
+	do GameManager.go_to_llano()
+	=> END

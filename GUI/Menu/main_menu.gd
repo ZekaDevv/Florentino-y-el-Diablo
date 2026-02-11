@@ -7,8 +7,13 @@ extends Control
 @onready var buttons_container: VBoxContainer = $MarginContainer/HBoxContainer/LeftColumn/ButtonsContainer
 @onready var options_container: VBoxContainer = $MarginContainer/HBoxContainer/LeftColumn/OptionsContainer 
 
+@onready var music_player = $MusicPlayer
 
+var menu_music = preload("res://assets/audio/alma_llanera_instrumental.mp3")
+	
+	
 func _ready():
+	MusicController.play_music(menu_music)
 	
 	options_container.visible = false
 	buttons_container.visible = true
@@ -18,10 +23,18 @@ func _ready():
 	slider_sfx.value = db_to_linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("SFX")))
 
 
+func _on_slider_master_value_changed(value: float) -> void:
+	_change_volume("Master", value)
 
+func _on_slider_music_value_changed(value: float) -> void:
+	_change_volume("Music", value)
+
+func _on_slider_sfx_value_changed(value: float) -> void:
+	_change_volume("SFX", value)
 
 func _on_btn_play_pressed() -> void:
 	GameManager.load_game_scene()
+	MusicController.stop_music()
 
 
 func _on_btn_options_pressed() -> void:

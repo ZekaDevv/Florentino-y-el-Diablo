@@ -5,12 +5,16 @@ class_name GameRoom
 @onready var detector = $PlayerDetector
 @onready var enemy_holder = $EnemyHolder
 
+var combat_music = preload("res://assets/audio/alma_llanera.mp3")
+
 var limit_left: int
 var limit_top: int
 var limit_right: int
 var limit_bottom: int
 
 func _ready():
+	MusicController.play_music(combat_music)
+	
 	detector.body_entered.connect(_on_player_entered)
 
 	var map_rect = tilemap.get_used_rect()
@@ -27,7 +31,6 @@ func _ready():
 	limit_right = int(global_bottom_right.x)
 	limit_bottom = int(global_bottom_right.y)
 
-	enemy_holder.process_mode = Node.PROCESS_MODE_DISABLED
 
 func _on_player_entered(body):
 	if body.is_in_group("player"):
@@ -39,4 +42,3 @@ func _on_player_entered(body):
 			camera.limit_right = limit_right
 			camera.limit_bottom = limit_bottom
 		
-		enemy_holder.process_mode = Node.PROCESS_MODE_INHERIT

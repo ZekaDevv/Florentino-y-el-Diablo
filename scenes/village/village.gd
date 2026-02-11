@@ -4,7 +4,12 @@ extends Node2D
 @onready var tilemap = $Floor
 @onready var heart_container = $HUD
 
+var villaje_music = preload("res://assets/audio/moliendo_café.mp3")
+
 func _ready() -> void:
+	MusicController.play_music(villaje_music)
+
+	
 	var map_react = tilemap.get_used_rect()
 	var tile_size = tilemap.tile_set.tile_size
 	

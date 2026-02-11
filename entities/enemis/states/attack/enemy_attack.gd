@@ -37,5 +37,4 @@ func shoot_at_player() -> void:
 		
 	var direction = enemy.global_position.direction_to(enemy.player.global_position)
 	
-	enemy.current_weapon.shoot(direction, Vector2.ZERO)
-
+	enemy.current_weapon.shoot(direction, Vector2.ZERO) 
