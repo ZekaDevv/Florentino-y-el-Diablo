@@ -13,3 +13,5 @@ Principales Inspiraciones:
 
 - The Binding of Isaac
 - Soul Knight
+
+Proyecto presentado en Lenguaje de Programación II
